@@ -1,26 +1,19 @@
-setenv PDKPATH /farmshare/classes/ee/272/PDKs/share/pdk/sky130A
+setenv PDKPATH /farmshare/home/classes/ee/272/PDKs/sky130A
 
 setenv PATH /cad/mentor/2019.11/Catapult_Synthesis_10.4b-841621/Mgc_home/bin:$PATH
-setenv PATH /cad/iverilog/bin:$PATH
 setenv MGLS_LICENSE_FILE 1717@cadlic0.stanford.edu
 
+source /cad/modules/tcl/init/tcsh
 module load base
-module load vcs
-module load lc
-module load syn
-module load xcelium
-module load genus
-module load innovus/20.13.000
+module load vcs/S-2021.09-SP1
+module load dc_shell/S-2021.06-SP5-4
+module load innovus/21.16.000
 module load calibre/2019.1
-module load prime
-module load magic/latest
-module load netgen/latest
+module load prime/T-2022.03
 
-# export PATH=/cad/openlane/build/bin:$PATH
+module load genus/20.11.000 
 
-# Autocomplete for make
 complete make \
     'n/-f/f/' \
     'c/*=/f/' \
     'n@*@`cat -s GNUmakefile Makefile makefile |& sed -n -e "/No such file/d" -e "/^[^     #].*:/s/:.*//p"`@'
-
