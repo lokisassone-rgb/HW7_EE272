@@ -36,23 +36,23 @@ outputs:
 #-------------------------------------------------------------------------
 
 commands:
-  - cp /farmshare/classes/ee/272/sky130_sram_macros/sky130_sram_4kbyte_1rw1r_32x1024_8/sky130_sram_4kbyte_1rw1r_32x1024_8.sp              outputs/
-  - cp /farmshare/classes/ee/272/sky130_sram_macros/sky130_sram_4kbyte_1rw1r_32x1024_8/sky130_sram_4kbyte_1rw1r_32x1024_8.v               outputs/
-  - cp /farmshare/classes/ee/272/sky130_sram_macros/sky130_sram_4kbyte_1rw1r_32x1024_8/sky130_sram_4kbyte_1rw1r_32x1024_8.lef             outputs/
-  - cp /farmshare/classes/ee/272/sky130_sram_macros/sky130_sram_4kbyte_1rw1r_32x1024_8/sky130_sram_4kbyte_1rw1r_32x1024_8_TT_1p8V_25C.lib outputs/
-  - cp /farmshare/classes/ee/272/sky130_sram_macros/sky130_sram_4kbyte_1rw1r_32x1024_8/sky130_sram_4kbyte_1rw1r_32x1024_8.gds             outputs/
-  - cp /farmshare/classes/ee/272/sky130_sram_macros/sky130_sram_4kbyte_1rw1r_32x1024_8/sky130_sram_4kbyte_1rw1r_32x1024_8_TT_1p8V_25C.db  outputs/
+  - cp /farmshare/home/classes/ee/272/sky130_sram_macros/sky130_sram_4kbyte_1rw1r_32x1024_8/sky130_sram_4kbyte_1rw1r_32x1024_8.sp              outputs/
+  - cp /farmshare/home/classes/ee/272/sky130_sram_macros/sky130_sram_4kbyte_1rw1r_32x1024_8/sky130_sram_4kbyte_1rw1r_32x1024_8.v               outputs/
+  - cp /farmshare/home/classes/ee/272/sky130_sram_macros/sky130_sram_4kbyte_1rw1r_32x1024_8/sky130_sram_4kbyte_1rw1r_32x1024_8.lef             outputs/
+  - cp /farmshare/home/classes/ee/272/sky130_sram_macros/sky130_sram_4kbyte_1rw1r_32x1024_8/sky130_sram_4kbyte_1rw1r_32x1024_8_TT_1p8V_25C.lib outputs/
+  - cp /farmshare/home/classes/ee/272/sky130_sram_macros/sky130_sram_4kbyte_1rw1r_32x1024_8/sky130_sram_4kbyte_1rw1r_32x1024_8.gds             outputs/
+  - cp /farmshare/home/classes/ee/272/sky130_sram_macros/sky130_sram_4kbyte_1rw1r_32x1024_8/sky130_sram_4kbyte_1rw1r_32x1024_8_TT_1p8V_25C.db  outputs/
 
-  - cp /farmshare/classes/ee/272/sky130_sram_macros/sky130_sram_2kbyte_1rw1r_32x512_8/sky130_sram_2kbyte_1rw1r_32x512_8.sp                outputs/
-  - cp /farmshare/classes/ee/272/sky130_sram_macros/sky130_sram_2kbyte_1rw1r_32x512_8/sky130_sram_2kbyte_1rw1r_32x512_8.v                 outputs/
-  - cp /farmshare/classes/ee/272/sky130_sram_macros/sky130_sram_2kbyte_1rw1r_32x512_8/sky130_sram_2kbyte_1rw1r_32x512_8.lef               outputs/
-  - cp /farmshare/classes/ee/272/sky130_sram_macros/sky130_sram_2kbyte_1rw1r_32x512_8/sky130_sram_2kbyte_1rw1r_32x512_8_TT_1p8V_25C.lib   outputs/
-  - cp /farmshare/classes/ee/272/sky130_sram_macros/sky130_sram_2kbyte_1rw1r_32x512_8/sky130_sram_2kbyte_1rw1r_32x512_8.gds               outputs/
-  - cp /farmshare/classes/ee/272/sky130_sram_macros/sky130_sram_2kbyte_1rw1r_32x512_8/sky130_sram_2kbyte_1rw1r_32x512_8_TT_1p8V_25C.db    outputs/
+  - cp /farmshare/home/classes/ee/272/sky130_sram_macros/sky130_sram_2kbyte_1rw1r_32x512_8/sky130_sram_2kbyte_1rw1r_32x512_8.sp                outputs/
+  - cp /farmshare/home/classes/ee/272/sky130_sram_macros/sky130_sram_2kbyte_1rw1r_32x512_8/sky130_sram_2kbyte_1rw1r_32x512_8.v                 outputs/
+  - cp /farmshare/home/classes/ee/272/sky130_sram_macros/sky130_sram_2kbyte_1rw1r_32x512_8/sky130_sram_2kbyte_1rw1r_32x512_8.lef               outputs/
+  - cp /farmshare/home/classes/ee/272/sky130_sram_macros/sky130_sram_2kbyte_1rw1r_32x512_8/sky130_sram_2kbyte_1rw1r_32x512_8_TT_1p8V_25C.lib   outputs/
+  - cp /farmshare/home/classes/ee/272/sky130_sram_macros/sky130_sram_2kbyte_1rw1r_32x512_8/sky130_sram_2kbyte_1rw1r_32x512_8.gds               outputs/
+  - cp /farmshare/home/classes/ee/272/sky130_sram_macros/sky130_sram_2kbyte_1rw1r_32x512_8/sky130_sram_2kbyte_1rw1r_32x512_8_TT_1p8V_25C.db    outputs/
 
-  - cp /farmshare/classes/ee/272/sky130_sram_macros/sky130_sram_1kbyte_1rw1r_32x256_8/sky130_sram_1kbyte_1rw1r_32x256_8.sp                outputs/
-  - cp /farmshare/classes/ee/272/sky130_sram_macros/sky130_sram_1kbyte_1rw1r_32x256_8/sky130_sram_1kbyte_1rw1r_32x256_8.v                 outputs/
-  - cp /farmshare/classes/ee/272/sky130_sram_macros/sky130_sram_1kbyte_1rw1r_32x256_8/sky130_sram_1kbyte_1rw1r_32x256_8.lef               outputs/
-  - cp /farmshare/classes/ee/272/sky130_sram_macros/sky130_sram_1kbyte_1rw1r_32x256_8/sky130_sram_1kbyte_1rw1r_32x256_8_TT_1p8V_25C.lib   outputs/
-  - cp /farmshare/classes/ee/272/sky130_sram_macros/sky130_sram_1kbyte_1rw1r_32x256_8/sky130_sram_1kbyte_1rw1r_32x256_8.gds               outputs/
-  - cp /farmshare/classes/ee/272/sky130_sram_macros/sky130_sram_1kbyte_1rw1r_32x256_8/sky130_sram_1kbyte_1rw1r_32x256_8_TT_1p8V_25C.db    outputs/
+  - cp /farmshare/home/classes/ee/272/sky130_sram_macros/sky130_sram_1kbyte_1rw1r_32x256_8/sky130_sram_1kbyte_1rw1r_32x256_8.sp                outputs/
+  - cp /farmshare/home/classes/ee/272/sky130_sram_macros/sky130_sram_1kbyte_1rw1r_32x256_8/sky130_sram_1kbyte_1rw1r_32x256_8.v                 outputs/
+  - cp /farmshare/home/classes/ee/272/sky130_sram_macros/sky130_sram_1kbyte_1rw1r_32x256_8/sky130_sram_1kbyte_1rw1r_32x256_8.lef               outputs/
+  - cp /farmshare/home/classes/ee/272/sky130_sram_macros/sky130_sram_1kbyte_1rw1r_32x256_8/sky130_sram_1kbyte_1rw1r_32x256_8_TT_1p8V_25C.lib   outputs/
+  - cp /farmshare/home/classes/ee/272/sky130_sram_macros/sky130_sram_1kbyte_1rw1r_32x256_8/sky130_sram_1kbyte_1rw1r_32x256_8.gds               outputs/
+  - cp /farmshare/home/classes/ee/272/sky130_sram_macros/sky130_sram_1kbyte_1rw1r_32x256_8/sky130_sram_1kbyte_1rw1r_32x256_8_TT_1p8V_25C.db    outputs/
