@@ -1,0 +1,66 @@
+#=========================================================================
+# Cadence Innovus -- Power step for DNN accelerator
+#=========================================================================
+# Custom because SkyWater stdcells use VPWR/VGND (not VDD/VSS),
+# and we need to route power to 12 SRAM macros.
+
+name: cadence-innovus-power
+
+#-------------------------------------------------------------------------
+# Inputs and Outputs
+#-------------------------------------------------------------------------
+
+inputs:
+  - innovus-foundation-flow
+  - adk
+  - design.sdc
+  - design.checkpoint
+
+outputs:
+  - design.checkpoint
+
+#-------------------------------------------------------------------------
+# Commands
+#-------------------------------------------------------------------------
+
+commands:
+  - ln -sf inputs/innovus-foundation-flow
+  - innovus -overwrite -64 -nowin -init START.tcl -log logs/run.log
+
+  # Outputs
+  - cd outputs
+  - ln -sf ../checkpoints/design.checkpoint
+
+#-------------------------------------------------------------------------
+# Parameters
+#-------------------------------------------------------------------------
+
+parameters:
+  order:
+    - globalnetconnect.tcl
+    - main.tcl
+
+#-------------------------------------------------------------------------
+# Debug
+#-------------------------------------------------------------------------
+
+debug:
+  - innovus -overwrite -64
+    -init innovus-foundation-flow/custom-scripts/run-debug.tcl
+    -log logs/debug.log
+
+#-------------------------------------------------------------------------
+# Assertions
+#-------------------------------------------------------------------------
+
+preconditions:
+
+  - assert Tool( 'innovus' )
+  - assert File( 'inputs/innovus-foundation-flow' )
+  - assert File( 'inputs/adk' )
+  - assert File( 'inputs/design.sdc' )
+  - assert File( 'inputs/design.checkpoint' )
+
+postconditions:
+
+  - assert File( 'outputs/design.checkpoint' )
