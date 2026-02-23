@@ -97,7 +97,7 @@ def construct():
   # in your graph but configure it differently, for example, RTL simulation and
   # gate-level simulation use the same VCS node
   
-  rtl_sim         = Step( 'synopsys-vcs-sim',              default=True )
+  rtl_sim         = Step( 'synopsys-vcs-sim-old',              default=True )
   gl_sim          = Step( this_dir + '/open-icarus-simulation'          )
 
   iflow           = Step( 'cadence-innovus-flowsetup',     default=True )
