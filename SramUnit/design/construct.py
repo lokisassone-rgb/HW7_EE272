@@ -212,7 +212,7 @@ def construct():
 
   g.connect_by_name( rtl,             rtl_sim         ) # design.v
   g.connect_by_name( testbench,       rtl_sim         ) # testbench.sv
-  g.connect( rtl_sim.o( 'run.vcd' ), gen_saif_rtl.i( 'run.vcd' ) ) 
+  g.connect( rtl_sim.o( 'run.vpd' ), gen_saif_rtl.i( 'run.vcd' ) ) 
   # FIXME: VCS sim node generates a VCD file but gives it a VPD extension
 
   g.connect_by_name( sram,            rtl_sim         )
