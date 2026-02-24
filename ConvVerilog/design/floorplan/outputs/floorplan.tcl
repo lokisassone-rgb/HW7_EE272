@@ -49,9 +49,37 @@ setFlipping s
 # locations for all macros. You can replace this with manual placeInstance
 # commands later if you want more control.
 
-planDesign
+#planDesign
 
 # Add halos around all macros to keep stdcells away from SRAM edges.
 # This prevents DRC violations and routing congestion near macros.
 
-addHaloToBlock 10.88 10.88 10.88 10.88 -allBlock
+#addHaloToBlock 10.88 10.88 10.88 10.88 -allBlock
+
+placeInstance weight_double_buffer_inst/ram/genblk1_width_macro_0__depth_macro_0__sram 37 202 R0
+placeInstance weight_double_buffer_inst/ram/genblk1_width_macro_0__depth_macro_1__sram 770 202 R0
+placeInstance ifmap_double_buffer_inst/ram/genblk1_width_macro_0__depth_macro_0__sram 37 1635 MX
+placeInstance ifmap_double_buffer_inst/ram/genblk1_width_macro_0__depth_macro_1__sram 770 1635 MX
+placeInstance ofmap_buffer_inst/ram0/genblk1_width_macro_0__sram 1525.0000 70.0000 R0
+placeInstance ofmap_buffer_inst/ram0/genblk1_width_macro_1__sram 1525.0000 651.0000 R0
+placeInstance ofmap_buffer_inst/ram0/genblk1_width_macro_2__sram 2075.0000 90.0000 R0
+placeInstance ofmap_buffer_inst/ram0/genblk1_width_macro_3__sram 2075.0000 651.0000 R0
+placeInstance ofmap_buffer_inst/ram1/genblk1_width_macro_0__sram 1527.0000 1393.0000 R0
+placeInstance ofmap_buffer_inst/ram1/genblk1_width_macro_1__sram 1527.0000 2016.0000 R0
+placeInstance ofmap_buffer_inst/ram1/genblk1_width_macro_2__sram 2075.0000 1393.0000 R0
+placeInstance ofmap_buffer_inst/ram1/genblk1_width_macro_3__sram 2075.0000 2016.0000 R0
+
+addHaloToBlock 5 5 5 5 weight_double_buffer_inst/ram/genblk1_width_macro_0__depth_macro_0__sram
+addHaloToBlock 5 5 5 5 weight_double_buffer_inst/ram/genblk1_width_macro_0__depth_macro_1__sram 
+addHaloToBlock 5 5 5 5 ifmap_double_buffer_inst/ram/genblk1_width_macro_0__depth_macro_0__sram
+addHaloToBlock 5 5 5 5 ifmap_double_buffer_inst/ram/genblk1_width_macro_0__depth_macro_1__sram 
+addHaloToBlock 5 5 5 5 ofmap_buffer_inst/ram0/genblk1_width_macro_0__sram 
+addHaloToBlock 5 5 5 5 ofmap_buffer_inst/ram0/genblk1_width_macro_1__sram 
+addHaloToBlock 5 5 5 5 ofmap_buffer_inst/ram0/genblk1_width_macro_2__sram 
+addHaloToBlock 5 5 5 5 ofmap_buffer_inst/ram0/genblk1_width_macro_3__sram 
+addHaloToBlock 5 5 5 5 ofmap_buffer_inst/ram1/genblk1_width_macro_0__sram 
+addHaloToBlock 5 5 5 5 ofmap_buffer_inst/ram1/genblk1_width_macro_1__sram 
+addHaloToBlock 5 5 5 5 ofmap_buffer_inst/ram1/genblk1_width_macro_2__sram 
+addHaloToBlock 5 5 5 5 ofmap_buffer_inst/ram1/genblk1_width_macro_3__sram 
+
+setDontUse sky130_fd_sc_hd__clkinv_16 true
