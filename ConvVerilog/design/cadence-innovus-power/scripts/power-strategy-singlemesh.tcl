@@ -180,7 +180,6 @@ addStripe -nets {VSS VDD} -layer $pmesh_top -direction horizontal \
 # Route power to power pins on the macro
 
 deselectAll
-selectInst sram
 
 sroute -connect {blockPin} -layerChangeRange {met1 met5} \
        -blockPinTarget { nearestTarget } -nets {VDD VSS} \
@@ -195,4 +194,4 @@ sroute -connect {blockPin} -layerChangeRange {met1 met5} \
               ofmap_buffer_inst/ram1/genblk1_width_macro_1__sram \
               ofmap_buffer_inst/ram1/genblk1_width_macro_2__sram \
               ofmap_buffer_inst/ram1/genblk1_width_macro_3__sram} 
-              
+
