@@ -36,7 +36,10 @@ set_driving_cell -no_design_rule \
 #
 # - make this non-zero to avoid hold buffers on input-registered designs
 
-set_input_delay -clock ${clock_name} [expr ${dc_clock_period}/2.0] [all_inputs]
+set_input_delay -clock ${clock_name} [expr ${dc_clock_period}/2.0] [remove_from_collection [all_inputs] [get_ports {clk rst_n}]]
+
+# Reset is asynchronous — don't constrain its timing
+set_false_path -from [get_ports rst_n]
 
 # set_output_delay constraints for output ports
 
