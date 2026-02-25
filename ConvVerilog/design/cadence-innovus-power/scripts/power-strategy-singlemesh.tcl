@@ -184,7 +184,9 @@ deselectAll
 sroute -connect {blockPin} -layerChangeRange {met1 met5} \
        -blockPinTarget { nearestTarget } -nets {VDD VSS} \
        -allowLayerChange 1 -blockPin useLef \
-       -inst {ifmap_double_buffer_inst/ram/genblk1_width_macro_0__depth_macro_0__sram \
+       -inst {weight_double_buffer_inst/ram/genblk1_width_macro_0__depth_macro_0__sram \
+              weight_double_buffer_inst/ram/genblk1_width_macro_0__depth_macro_1__sram \
+              ifmap_double_buffer_inst/ram/genblk1_width_macro_0__depth_macro_0__sram \
               ifmap_double_buffer_inst/ram/genblk1_width_macro_0__depth_macro_1__sram \
               ofmap_buffer_inst/ram0/genblk1_width_macro_0__sram \
               ofmap_buffer_inst/ram0/genblk1_width_macro_1__sram \
