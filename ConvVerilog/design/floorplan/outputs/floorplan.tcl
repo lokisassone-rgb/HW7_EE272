@@ -58,8 +58,8 @@ placeInstance weight_double_buffer_inst/ram/genblk1_width_macro_0__depth_macro_1
 
 placeInstance ofmap_buffer_inst/ram0/genblk1_width_macro_0__sram 2100.475 629.89 R90
 placeInstance ofmap_buffer_inst/ram0/genblk1_width_macro_1__sram 2101.855 69.95 R90
-placeInstance ofmap_buffer_inst/ram0/genblk1_width_macro_2__sram 1060.09 52.94 R90
-placeInstance ofmap_buffer_inst/ram0/genblk1_width_macro_3__sram 1583.12 51.365 R90
+placeInstance ofmap_buffer_inst/ram0/genblk1_width_macro_2__sram 1080.09 52.94 R90
+placeInstance ofmap_buffer_inst/ram0/genblk1_width_macro_3__sram 1580.12 51.365 R90 
 placeInstance ofmap_buffer_inst/ram1/genblk1_width_macro_0__sram 70.24 1190.465 R90
 placeInstance ofmap_buffer_inst/ram1/genblk1_width_macro_1__sram 59.56 648.91 R90
 placeInstance ofmap_buffer_inst/ram1/genblk1_width_macro_2__sram 78.66 58.58 R90
