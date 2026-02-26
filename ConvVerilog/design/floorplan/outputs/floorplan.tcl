@@ -50,7 +50,7 @@ setFlipping s
 
 #planDesign
 
-placeInstance ifmap_double_buffer_inst/ram/genblk1_width_macro_0__depth_macro_0__sram 38.835 1879.165 R90
+placeInstance ifmap_double_buffer_inst/ram/genblk1_width_macro_0__depth_macro_0__sram 38.835 1779.165 R90
 placeInstance ifmap_double_buffer_inst/ram/genblk1_width_macro_0__depth_macro_1__sram 776.815 1870.995 R90
 
 placeInstance weight_double_buffer_inst/ram/genblk1_width_macro_0__depth_macro_0__sram 1582.57 1879.66 R0
