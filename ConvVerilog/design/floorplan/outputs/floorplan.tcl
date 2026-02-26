@@ -65,7 +65,7 @@ placeInstance ofmap_buffer_inst/ram1/genblk1_width_macro_1__sram 95.56 648.91 R9
 placeInstance ofmap_buffer_inst/ram1/genblk1_width_macro_2__sram 108.66 58.58 R90
 placeInstance ofmap_buffer_inst/ram1/genblk1_width_macro_3__sram 588.325 621.365 R90
 
-addHaloToBlock 5 5 5 5 -allBlock
+addHaloToBlock 15 15 15 15 -allBlock
 
 # Create a routing blockage on li1 layer over the entire chip area, so that 
 # Innovus does not use this layer for routing
