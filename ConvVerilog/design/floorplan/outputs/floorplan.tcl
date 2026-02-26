@@ -58,16 +58,16 @@ placeInstance weight_double_buffer_inst/ram/genblk1_width_macro_0__depth_macro_1
 
 placeInstance ofmap_buffer_inst/ram0/genblk1_width_macro_0__sram 2060.475 629.89 R90
 placeInstance ofmap_buffer_inst/ram0/genblk1_width_macro_1__sram 2031.855 69.95 R90
-placeInstance ofmap_buffer_inst/ram0/genblk1_width_macro_2__sram 1080.09 680.0 R90
+placeInstance ofmap_buffer_inst/ram0/genblk1_width_macro_2__sram 1080.09 1050.0 R90
 placeInstance ofmap_buffer_inst/ram0/genblk1_width_macro_3__sram 1580.12 600.365 R90 
 placeInstance ofmap_buffer_inst/ram1/genblk1_width_macro_0__sram 70.24 1190.465 R90
-placeInstance ofmap_buffer_inst/ram1/genblk1_width_macro_1__sram 95.56 720.0 R90
+placeInstance ofmap_buffer_inst/ram1/genblk1_width_macro_1__sram 95.56 400.0 R90
 placeInstance ofmap_buffer_inst/ram1/genblk1_width_macro_2__sram 108.66 58.58 R90
 placeInstance ofmap_buffer_inst/ram1/genblk1_width_macro_3__sram 588.325 621.365 R90
 
-addHaloToBlock 15 15 15 15 -allBlock
+addHaloToBlock 20 20 20 20 -allBlock
 
 # Create a routing blockage on li1 layer over the entire chip area, so that 
 # Innovus does not use this layer for routing
 
-createRouteBlk -box {0 0 5000 5000} -layer {li1}
+createRouteBlk -box 0 0 5000 5000 -layer li1
