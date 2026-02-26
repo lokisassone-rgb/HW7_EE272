@@ -70,4 +70,8 @@ addHaloToBlock 5 5 5 5 -allBlock
 # Create a routing blockage on li1 layer over the entire chip area, so that 
 # Innovus does not use this layer for routing
 
-#createRouteBlk -box {0 0 614 614} -layer {li1}
+set die_llx [dbGet top.fPlan.box_llx]
+set die_lly [dbGet top.fPlan.box_lly]
+set die_urx [dbGet top.fPlan.box_urx]
+set die_ury [dbGet top.fPlan.box_ury]
+createRouteBlk -box "$die_llx $die_lly $die_urx $die_ury" -layer {li1}
