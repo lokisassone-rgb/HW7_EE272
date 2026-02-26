@@ -67,4 +67,15 @@ placeInstance ofmap_buffer_inst/ram1/genblk1_width_macro_3__sram 588.325 52.235 
 
 addHaloToBlock 5 5 5 5 -allBlock
 
+# Block li1 routing around each SRAM macro (20µm margin) to prevent
+# shorts between signal routes and SRAM internal li1 geometry
+foreach inst [dbGet [dbGet top.insts.cell.baseClass block -p2].name] {
+  set box [dbGet [dbGet top.insts.name $inst -p].box]
+  set llx [expr [lindex [lindex $box 0] 0] - 20]
+  set lly [expr [lindex [lindex $box 0] 1] - 20]
+  set urx [expr [lindex [lindex $box 0] 2] + 20]
+  set ury [expr [lindex [lindex $box 0] 3] + 20]
+  createRouteBlk -box "$llx $lly $urx $ury" -layer {li1}
+}
+
 setDontUse sky130_fd_sc_hd__clkinv_16 true
