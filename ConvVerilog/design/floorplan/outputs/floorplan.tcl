@@ -50,32 +50,44 @@ setFlipping s
 
 #planDesign
 
-placeInstance ifmap_double_buffer_inst/ram/genblk1_width_macro_0__depth_macro_0__sram 38.835 1779.165 R90
-placeInstance ifmap_double_buffer_inst/ram/genblk1_width_macro_0__depth_macro_1__sram 776.815 1870.995 R90
+# ---------------------------------------------------------------
+# Macro placement: left-to-right dataflow
+#   Left side:  ifmap (top-left, MX=pins face down toward center)
+#               weight (bottom-left, R0)
+#   Center:     systolic array std cells (auto-placed)
+#   Right side: ofmap ram0 (bottom-right), ram1 (top-right), R0
+# ---------------------------------------------------------------
 
-placeInstance weight_double_buffer_inst/ram/genblk1_width_macro_0__depth_macro_0__sram 1582.57 1879.66 R0
-placeInstance weight_double_buffer_inst/ram/genblk1_width_macro_0__depth_macro_1__sram 1594.115 1159.51 R0
+# Weight SRAMs (4KB) — bottom-left, R0 orientation
+placeInstance weight_double_buffer_inst/ram/genblk1_width_macro_0__depth_macro_0__sram 45 190 R0
+placeInstance weight_double_buffer_inst/ram/genblk1_width_macro_0__depth_macro_1__sram 790 190 R0
 
-placeInstance ofmap_buffer_inst/ram0/genblk1_width_macro_0__sram 2100.475 629.89 R90
-placeInstance ofmap_buffer_inst/ram0/genblk1_width_macro_1__sram 2101.855 69.95 R90
-placeInstance ofmap_buffer_inst/ram0/genblk1_width_macro_2__sram 1060.09 52.94 R90
-placeInstance ofmap_buffer_inst/ram0/genblk1_width_macro_3__sram 1583.12 51.365 R90
-placeInstance ofmap_buffer_inst/ram1/genblk1_width_macro_0__sram 70.24 1190.465 R90
-placeInstance ofmap_buffer_inst/ram1/genblk1_width_macro_1__sram 59.56 648.91 R90
-placeInstance ofmap_buffer_inst/ram1/genblk1_width_macro_2__sram 78.66 58.58 R90
-placeInstance ofmap_buffer_inst/ram1/genblk1_width_macro_3__sram 588.325 52.235 R90
+# Ifmap SRAMs (4KB) — top-left, MX orientation (flipped so dout faces center)
+placeInstance ifmap_double_buffer_inst/ram/genblk1_width_macro_0__depth_macro_0__sram 45 1670 MX
+placeInstance ifmap_double_buffer_inst/ram/genblk1_width_macro_0__depth_macro_1__sram 790 1670 MX
+
+# Ofmap ram0 SRAMs (1KB) — bottom-right, 2x2 grid
+placeInstance ofmap_buffer_inst/ram0/genblk1_width_macro_0__sram 1545 80 R0
+placeInstance ofmap_buffer_inst/ram0/genblk1_width_macro_1__sram 1545 665 R0
+placeInstance ofmap_buffer_inst/ram0/genblk1_width_macro_2__sram 2085 80 R0
+placeInstance ofmap_buffer_inst/ram0/genblk1_width_macro_3__sram 2085 665 R0
+
+# Ofmap ram1 SRAMs (1KB) — top-right, 2x2 grid
+placeInstance ofmap_buffer_inst/ram1/genblk1_width_macro_0__sram 1545 1405 R0
+placeInstance ofmap_buffer_inst/ram1/genblk1_width_macro_1__sram 1545 2010 R0
+placeInstance ofmap_buffer_inst/ram1/genblk1_width_macro_2__sram 2085 1405 R0
+placeInstance ofmap_buffer_inst/ram1/genblk1_width_macro_3__sram 2085 2010 R0
 
 addHaloToBlock 5 5 5 5 -allBlock
 
-# Block li1 routing around each SRAM macro (20µm margin) to prevent
-# shorts between signal routes and SRAM internal li1 geometry
-foreach inst [dbGet [dbGet top.insts.cell.baseClass block -p2].name] {
-  set box [dbGet [dbGet top.insts.name $inst -p].box]
-  set llx [expr [lindex [lindex $box 0] 0] - 20]
-  set lly [expr [lindex [lindex $box 0] 1] - 20]
-  set urx [expr [lindex [lindex $box 0] 2] + 20]
-  set ury [expr [lindex [lindex $box 0] 3] + 20]
-  createRouteBlk -box "$llx $lly $urx $ury" -layer {li1}
-}
+# li1 routing blockages around SRAMs — uncomment if DRC shorts on li1 reappear
+# foreach inst [dbGet [dbGet top.insts.cell.baseClass block -p2].name] {
+#   set box [dbGet [dbGet top.insts.name $inst -p].box]
+#   set llx [expr [lindex [lindex $box 0] 0] - 20]
+#   set lly [expr [lindex [lindex $box 0] 1] - 20]
+#   set urx [expr [lindex [lindex $box 0] 2] + 20]
+#   set ury [expr [lindex [lindex $box 0] 3] + 20]
+#   createRouteBlk -box "$llx $lly $urx $ury" -layer {li1}
+# }
 
 setDontUse sky130_fd_sc_hd__clkinv_16 true
