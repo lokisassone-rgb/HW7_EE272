@@ -7,6 +7,8 @@
 setOptMode -fixCap true
 setOptMode -fixTran true
 setOptMode -fixFanoutLoad true
+setOptMode -usefulSkew true
+setOptMode -effort high
 
-optDesign -postRoute
+optDesign -postRoute -setup
 optDesign -postRoute -setup
