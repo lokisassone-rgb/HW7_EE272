@@ -65,6 +65,7 @@ commands:
 
 parameters:
   order:
+    - fixDRV.tcl
     - main.tcl
     - generate-results.tcl
     - reporting.tcl
