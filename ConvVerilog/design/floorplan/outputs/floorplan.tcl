@@ -50,20 +50,20 @@ setFlipping s
 
 #planDesign
 
-placeInstance ifmap_double_buffer_inst/ram/genblk1_width_macro_0__depth_macro_0__sram 38.835 1879.165 R90
-placeInstance ifmap_double_buffer_inst/ram/genblk1_width_macro_0__depth_macro_1__sram 776.815 1870.995 R90
+placeInstance ifmap_double_buffer_inst/ram/genblk1_width_macro_0__depth_macro_0__sram 38.835 1879.165 MX
+placeInstance ifmap_double_buffer_inst/ram/genblk1_width_macro_0__depth_macro_1__sram 776.815 1870.995 MX
 
 placeInstance weight_double_buffer_inst/ram/genblk1_width_macro_0__depth_macro_0__sram 1582.57 1879.66 R0
 placeInstance weight_double_buffer_inst/ram/genblk1_width_macro_0__depth_macro_1__sram 1594.115 1159.51 R0
 
-placeInstance ofmap_buffer_inst/ram0/genblk1_width_macro_0__sram 2060.475 629.89 R90
-placeInstance ofmap_buffer_inst/ram0/genblk1_width_macro_1__sram 2031.855 69.95 R90
-placeInstance ofmap_buffer_inst/ram0/genblk1_width_macro_2__sram 1080.09 621.365 R90
-placeInstance ofmap_buffer_inst/ram0/genblk1_width_macro_3__sram 1580.12 600.365 R90 
-placeInstance ofmap_buffer_inst/ram1/genblk1_width_macro_0__sram 70.24 1190.465 R90
-placeInstance ofmap_buffer_inst/ram1/genblk1_width_macro_1__sram 95.56 648.91 R90
-placeInstance ofmap_buffer_inst/ram1/genblk1_width_macro_2__sram 108.66 58.58 R90
-placeInstance ofmap_buffer_inst/ram1/genblk1_width_macro_3__sram 588.325 621.365 R90
+placeInstance ofmap_buffer_inst/ram0/genblk1_width_macro_0__sram 2060.475 629.89 R0
+placeInstance ofmap_buffer_inst/ram0/genblk1_width_macro_1__sram 2031.855 69.95 R0
+placeInstance ofmap_buffer_inst/ram0/genblk1_width_macro_2__sram 1080.09 621.365 R0
+placeInstance ofmap_buffer_inst/ram0/genblk1_width_macro_3__sram 1580.12 600.365 R0
+placeInstance ofmap_buffer_inst/ram1/genblk1_width_macro_0__sram 70.24 1190.465 R0
+placeInstance ofmap_buffer_inst/ram1/genblk1_width_macro_1__sram 95.56 648.91 R0
+placeInstance ofmap_buffer_inst/ram1/genblk1_width_macro_2__sram 108.66 58.58 R0
+placeInstance ofmap_buffer_inst/ram1/genblk1_width_macro_3__sram 588.325 621.365 R0
 
 addHaloToBlock 5 5 5 5 -allBlock
 
