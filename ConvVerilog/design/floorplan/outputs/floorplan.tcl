@@ -50,21 +50,26 @@ setFlipping s
 
 #planDesign
 
-placeInstance weight_double_buffer_inst/ram/genblk1_width_macro_0__depth_macro_0__sram 37 202 R0
-placeInstance weight_double_buffer_inst/ram/genblk1_width_macro_0__depth_macro_1__sram 770 202 R0
-placeInstance ifmap_double_buffer_inst/ram/genblk1_width_macro_0__depth_macro_0__sram 37 1635 MX
-placeInstance ifmap_double_buffer_inst/ram/genblk1_width_macro_0__depth_macro_1__sram 770 1635 MX
-placeInstance ofmap_buffer_inst/ram0/genblk1_width_macro_0__sram 1525.0000 70.0000 R0
-placeInstance ofmap_buffer_inst/ram0/genblk1_width_macro_1__sram 1525.0000 651.0000 R0
-placeInstance ofmap_buffer_inst/ram0/genblk1_width_macro_2__sram 2075.0000 90.0000 R0
-placeInstance ofmap_buffer_inst/ram0/genblk1_width_macro_3__sram 2075.0000 651.0000 R0
-placeInstance ofmap_buffer_inst/ram1/genblk1_width_macro_0__sram 1527.0000 1393.0000 R0
-placeInstance ofmap_buffer_inst/ram1/genblk1_width_macro_1__sram 1527.0000 2016.0000 R0
-placeInstance ofmap_buffer_inst/ram1/genblk1_width_macro_2__sram 2075.0000 1393.0000 R0
-placeInstance ofmap_buffer_inst/ram1/genblk1_width_macro_3__sram 2075.0000 2016.0000 R0
+placeInstance weight_double_buffer_inst/ram/genblk1_width_macro_0__depth_macro_0__sram 1067 1050 R0
+placeInstance weight_double_buffer_inst/ram/genblk1_width_macro_0__depth_macro_1__sram 1800 1050 R0
+
+placeInstance ifmap_double_buffer_inst/ram/genblk1_width_macro_0__depth_macro_0__sram 37 1800 R0
+placeInstance ifmap_double_buffer_inst/ram/genblk1_width_macro_0__depth_macro_1__sram 770 1800 R0
+
+placeInstance ofmap_buffer_inst/ram0/genblk1_width_macro_0__sram 1525 90 R0
+placeInstance ofmap_buffer_inst/ram0/genblk1_width_macro_1__sram 1525 550 R0
+placeInstance ofmap_buffer_inst/ram0/genblk1_width_macro_2__sram 2075 90 R0
+placeInstance ofmap_buffer_inst/ram0/genblk1_width_macro_3__sram 2075 550 R0
+
+placeInstance ofmap_buffer_inst/ram1/genblk1_width_macro_0__sram 50 90 R0
+placeInstance ofmap_buffer_inst/ram1/genblk1_width_macro_1__sram 50 550 R0
+placeInstance ofmap_buffer_inst/ram1/genblk1_width_macro_2__sram 575 90 R0
+placeInstance ofmap_buffer_inst/ram1/genblk1_width_macro_3__sram 575 550 R0
 
 
 addHaloToBlock 5 5 5 5 -allBlock
+
+setDontUse sky130_fd_sc_hd__clkinv_16 true
 
 # Create a routing blockage on li1 layer over the entire chip area, so that 
 # Innovus does not use this layer for routing
