@@ -72,11 +72,11 @@ placeInstance ofmap_buffer_inst/ram0/genblk1_width_macro_1__sram 1545 665 R0
 placeInstance ofmap_buffer_inst/ram0/genblk1_width_macro_2__sram 2085 80 R0
 placeInstance ofmap_buffer_inst/ram0/genblk1_width_macro_3__sram 2085 665 R0
 
-# Ofmap ram1 SRAMs (1KB) — top-right, 2x2 grid
-placeInstance ofmap_buffer_inst/ram1/genblk1_width_macro_0__sram 1545 1405 R0
-placeInstance ofmap_buffer_inst/ram1/genblk1_width_macro_1__sram 1545 2010 R0
-placeInstance ofmap_buffer_inst/ram1/genblk1_width_macro_2__sram 2085 1405 R0
-placeInstance ofmap_buffer_inst/ram1/genblk1_width_macro_3__sram 2085 2010 R0
+# Ofmap ram1 SRAMs (1KB) — top-right, 2x2 grid, MX so dout1 faces center
+placeInstance ofmap_buffer_inst/ram1/genblk1_width_macro_0__sram 1545 1405 MX
+placeInstance ofmap_buffer_inst/ram1/genblk1_width_macro_1__sram 1545 2010 MX
+placeInstance ofmap_buffer_inst/ram1/genblk1_width_macro_2__sram 2085 1405 MX
+placeInstance ofmap_buffer_inst/ram1/genblk1_width_macro_3__sram 2085 2010 MX
 
 addHaloToBlock 5 5 5 5 -allBlock
 
