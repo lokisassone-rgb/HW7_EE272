@@ -21,4 +21,30 @@ outputs:
 #-------------------------------------------------------------------------
 
 commands:
-  - source START.tcl
+  - ln -sf inputs/innovus-foundation-flow
+  - innovus -overwrite -64 -nowin -init START.tcl -log logs/run.log
+  - cd outputs && ln -sf ../checkpoints/design.checkpoint
+
+#-------------------------------------------------------------------------
+# Debug
+#-------------------------------------------------------------------------
+
+debug:
+  - innovus -overwrite -64
+    -init innovus-foundation-flow/custom-scripts/run-debug.tcl
+    -log logs/debug.log
+
+#-------------------------------------------------------------------------
+# Assertions
+#-------------------------------------------------------------------------
+
+preconditions:
+
+  - assert Tool( 'innovus' )
+  - assert File( 'inputs/innovus-foundation-flow' )
+  - assert File( 'inputs/adk' )
+  - assert File( 'inputs/design.checkpoint' )
+
+postconditions:
+
+  - assert File( 'outputs/design.checkpoint' )
