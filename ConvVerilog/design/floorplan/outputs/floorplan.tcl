@@ -56,16 +56,16 @@ placeInstance ifmap_double_buffer_inst/ram/genblk1_width_macro_0__depth_macro_1_
 placeInstance weight_double_buffer_inst/ram/genblk1_width_macro_0__depth_macro_0__sram 1582.57 1879.66 R0
 placeInstance weight_double_buffer_inst/ram/genblk1_width_macro_0__depth_macro_1__sram 1594.115 1159.51 R0
 
-placeInstance ofmap_buffer_inst/ram0/genblk1_width_macro_0__sram 2060.475 629.89 R90
-placeInstance ofmap_buffer_inst/ram0/genblk1_width_macro_1__sram 2031.855 69.95 R90
-placeInstance ofmap_buffer_inst/ram0/genblk1_width_macro_2__sram 1080.09 1050.0 R90
-placeInstance ofmap_buffer_inst/ram0/genblk1_width_macro_3__sram 1580.12 600.365 R90 
+placeInstance ofmap_buffer_inst/ram0/genblk1_width_macro_0__sram 2100.475 629.89 R90
+placeInstance ofmap_buffer_inst/ram0/genblk1_width_macro_1__sram 2101.855 69.95 R90
+placeInstance ofmap_buffer_inst/ram0/genblk1_width_macro_2__sram 1080.09 221.365 R90
+placeInstance ofmap_buffer_inst/ram0/genblk1_width_macro_3__sram 1580.12 221.365 R90 
 placeInstance ofmap_buffer_inst/ram1/genblk1_width_macro_0__sram 70.24 1190.465 R90
-placeInstance ofmap_buffer_inst/ram1/genblk1_width_macro_1__sram 95.56 400.0 R90
-placeInstance ofmap_buffer_inst/ram1/genblk1_width_macro_2__sram 108.66 58.58 R90
-placeInstance ofmap_buffer_inst/ram1/genblk1_width_macro_3__sram 588.325 621.365 R90
+placeInstance ofmap_buffer_inst/ram1/genblk1_width_macro_1__sram 59.56 648.91 R90
+placeInstance ofmap_buffer_inst/ram1/genblk1_width_macro_2__sram 78.66 58.58 R90
+placeInstance ofmap_buffer_inst/ram1/genblk1_width_macro_3__sram 588.325 221.365 R90
 
-addHaloToBlock 20 20 20 20 -allBlock
+addHaloToBlock 5 5 5 5 -allBlock
 
 # Create a routing blockage on li1 layer over the entire chip area, so that 
 # Innovus does not use this layer for routing
