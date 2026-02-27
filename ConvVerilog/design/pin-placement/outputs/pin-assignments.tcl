@@ -2,15 +2,14 @@
 # pin-assignments.tcl
 #=========================================================================
 # Pin assignments for the conv accelerator.
-# Matches left-to-right dataflow floorplan:
-#   - Left:   ifmap/weight input data + config data (near left-side SRAMs)
-#   - Right:  ofmap output data (near right-side SRAMs)
-#   - Top:    control signals (clk, rst_n, vld/rdy handshakes)
-#   - Bottom: unused
+#   - Top:    ofmap data + ofmap handshake
+#   - Left:   clk, rst_n
+#   - Bottom: ifmap/weight data + handshake, config data + handshake
+#   - Right:  unused
 #
 # Metal layers chosen to match edge orientation:
 #   - met3 (horizontal) for LEFT/RIGHT edges
-#   - met2 (vertical)   for TOP edge
+#   - met2 (vertical)   for TOP/BOTTOM edges
 #
 # Author : Christopher Torng
 # Date   : March 26, 2018
@@ -19,38 +18,38 @@
 # Pin Assignments
 #-------------------------------------------------------------------------
 
-# Top side: control signals only (met2, vertical metal for top edge)
+# Top side: ofmap data bus + handshake (met2, vertical metal for top edge)
 
 set pins_top {}
-lappend pins_top clk rst_n
-lappend pins_top ifmap_weight_vld ifmap_weight_rdy
-lappend pins_top config_vld config_rdy
-
-# Right side: ofmap data bus + handshake (near ofmap SRAMs on right)
-
-set pins_right {}
 for {set i 31} {$i >= 0} {incr i -1} {
-  lappend pins_right "ofmap_data\[$i\]"
+  lappend pins_top "ofmap_data\[$i\]"
 }
-lappend pins_right ofmap_vld ofmap_rdy
+lappend pins_top ofmap_vld ofmap_rdy
 
-# Bottom side: empty
-
-set pins_bottom {}
-
-# Left side: ifmap/weight data bus + config data bus (near input SRAMs on left)
+# Left side: clk and rst_n (met3, horizontal metal for left edge)
 
 set pins_left {}
+lappend pins_left clk rst_n
+
+# Bottom side: ifmap/weight data + handshake, config data + handshake (met2, vertical metal)
+
+set pins_bottom {}
 for {set i 16} {$i >= 0} {incr i -1} {
-  lappend pins_left "ifmap_weight_data\[$i\]"
+  lappend pins_bottom "ifmap_weight_data\[$i\]"
 }
+lappend pins_bottom ifmap_weight_vld ifmap_weight_rdy
 for {set i 15} {$i >= 0} {incr i -1} {
-  lappend pins_left "config_data\[$i\]"
+  lappend pins_bottom "config_data\[$i\]"
 }
+lappend pins_bottom config_vld config_rdy
+
+# Right side: empty
+
+set pins_right {}
 
 
 # Spread the pins evenly along the sides of the block
 
-editPin -layer met3 -pin $pins_left   -side LEFT   -spreadType SIDE
-editPin -layer met3 -pin $pins_right  -side RIGHT  -spreadType SIDE
 editPin -layer met2 -pin $pins_top    -side TOP    -spreadType SIDE
+editPin -layer met3 -pin $pins_left   -side LEFT   -spreadType SIDE
+editPin -layer met2 -pin $pins_bottom -side BOTTOM -spreadType SIDE

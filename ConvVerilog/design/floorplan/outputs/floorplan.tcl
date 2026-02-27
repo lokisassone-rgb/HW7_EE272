@@ -59,24 +59,24 @@ setFlipping s
 # ---------------------------------------------------------------
 
 # Weight SRAMs (4KB) — bottom-left, R0 orientation
-placeInstance weight_double_buffer_inst/ram/genblk1_width_macro_0__depth_macro_0__sram 45 190 R0
-placeInstance weight_double_buffer_inst/ram/genblk1_width_macro_0__depth_macro_1__sram 790 190 R0
+placeInstance weight_double_buffer_inst/ram/genblk1_width_macro_0__depth_macro_0__sram 1491 883 R90
+placeInstance weight_double_buffer_inst/ram/genblk1_width_macro_0__depth_macro_1__sram 1491 101 R90
 
 # Ifmap SRAMs (4KB) — top-left, MX orientation (flipped so dout faces center)
-placeInstance ifmap_double_buffer_inst/ram/genblk1_width_macro_0__depth_macro_0__sram 45 1670 MX
-placeInstance ifmap_double_buffer_inst/ram/genblk1_width_macro_0__depth_macro_1__sram 790 1670 MX
+placeInstance ifmap_double_buffer_inst/ram/genblk1_width_macro_0__depth_macro_0__sram 322 883 R270
+placeInstance ifmap_double_buffer_inst/ram/genblk1_width_macro_0__depth_macro_1__sram 322 101 R270
 
 # Ofmap ram0 SRAMs (1KB) — bottom-right, 2x2 grid
-placeInstance ofmap_buffer_inst/ram0/genblk1_width_macro_0__sram 1545 80 R0
-placeInstance ofmap_buffer_inst/ram0/genblk1_width_macro_1__sram 1545 665 R0
-placeInstance ofmap_buffer_inst/ram0/genblk1_width_macro_2__sram 2085 80 R0
-placeInstance ofmap_buffer_inst/ram0/genblk1_width_macro_3__sram 2085 665 R0
+placeInstance ofmap_buffer_inst/ram0/genblk1_width_macro_0__sram 1354 1643 MX
+placeInstance ofmap_buffer_inst/ram0/genblk1_width_macro_1__sram 128 1643 MX
+placeInstance ofmap_buffer_inst/ram0/genblk1_width_macro_2__sram 1957 1643 MX
+placeInstance ofmap_buffer_inst/ram0/genblk1_width_macro_3__sram 705 1643 MX
 
 # Ofmap ram1 SRAMs (1KB) — top-right, 2x2 grid, MX so dout1 faces center
-placeInstance ofmap_buffer_inst/ram1/genblk1_width_macro_0__sram 1545 1405 MX
-placeInstance ofmap_buffer_inst/ram1/genblk1_width_macro_1__sram 1545 2010 MX
-placeInstance ofmap_buffer_inst/ram1/genblk1_width_macro_2__sram 2085 1405 MX
-placeInstance ofmap_buffer_inst/ram1/genblk1_width_macro_3__sram 2085 2010 MX
+placeInstance ofmap_buffer_inst/ram1/genblk1_width_macro_0__sram 1350 2113 MX
+placeInstance ofmap_buffer_inst/ram1/genblk1_width_macro_1__sram 116 2113 MX
+placeInstance ofmap_buffer_inst/ram1/genblk1_width_macro_2__sram 1948 2113 MX
+placeInstance ofmap_buffer_inst/ram1/genblk1_width_macro_3__sram 710 2113 MX
 
 addHaloToBlock 5 5 5 5 -allBlock
 
