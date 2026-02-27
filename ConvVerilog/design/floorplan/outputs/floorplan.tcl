@@ -80,12 +80,12 @@ placeInstance ofmap_buffer_inst/ram1/genblk1_width_macro_3__sram 710 2113 MX
 
 addHaloToBlock 5 5 5 5 -allBlock
 
-# Guide the systolic array cells to stay compact in the center
+# Placement guide: keep systolic array cells compact in the center
 # This reduces wire delay on the critical MAC-to-MAC paths
-createGuide systolic_guide \
-  800 400 1800 1600
-addInstToGuide systolic_guide \
-  [dbGet [dbGet top.insts.name systolic_array_with_skew_inst/* -p].name]
+createInstGroup systolic_guide -region 800 400 1800 1600
+foreach inst [dbGet [dbGet top.insts.name systolic_array_with_skew_inst/* -p].name] {
+  addInstToInstGroup systolic_guide $inst
+}
 
 # li1 routing blockages around SRAMs — uncomment if DRC shorts on li1 reappear
 # foreach inst [dbGet [dbGet top.insts.cell.baseClass block -p2].name] {
