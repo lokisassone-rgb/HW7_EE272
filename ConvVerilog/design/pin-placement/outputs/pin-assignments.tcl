@@ -26,10 +26,18 @@ for {set i 31} {$i >= 0} {incr i -1} {
 }
 lappend pins_top ofmap_vld ofmap_rdy
 
-# Left side: clk and rst_n (met3, horizontal metal for left edge)
+# Left side: clk and rst_n spread evenly (met3, horizontal metal for left edge)
+# Compute die height and place pins at 1/3 and 2/3 of the left edge
 
 set pins_left {}
 lappend pins_left clk rst_n
+
+set die_box [dbGet top.fPlan.box]
+set die_lly [lindex [lindex $die_box 0] 1]
+set die_ury [lindex [lindex $die_box 0] 3]
+set die_height [expr $die_ury - $die_lly]
+set left_range_start [expr $die_lly + $die_height / 3.0]
+set left_range_end   [expr $die_lly + 2.0 * $die_height / 3.0]
 
 # Bottom side: ifmap/weight data + handshake, config data + handshake (met2, vertical metal)
 
@@ -51,5 +59,5 @@ set pins_right {}
 # Spread the pins evenly along the sides of the block
 
 editPin -layer met2 -pin $pins_top    -side TOP    -spreadType SIDE
-editPin -layer met3 -pin $pins_left   -side LEFT   -spreadType SIDE
+editPin -layer met3 -pin $pins_left   -side LEFT   -spreadType RANGE -spreadDirection clockwise -offsetStart $left_range_start -offsetEnd $left_range_end
 editPin -layer met2 -pin $pins_bottom -side BOTTOM -spreadType SIDE
