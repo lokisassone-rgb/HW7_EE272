@@ -60,7 +60,6 @@ def construct():
   syn_compile     = Step( this_dir + '/synopsys-dc-compile'     )  # custom DC compile for case-insensitive naming
   pin_placement   = Step( this_dir + '/pin-placement'           )  # custom pin assignments
   floorplan       = Step( this_dir + '/floorplan'               )  # custom floorplan with SRAM placement
-  postroute_opt   = Step( this_dir + '/cadence-innovus-postroute-opt' )  # post-route DRV/timing fix
 
   # Custom power node -- SkyWater stdcells use VPWR/VGND instead of
   # VDD/VSS, and the layer stack is different because of the li1 layer
@@ -105,7 +104,6 @@ def construct():
   g.add_step( postcts_hold    )
   g.add_step( route           )
   g.add_step( postroute       )
-  g.add_step( postroute_opt   )
   g.add_step( signoff         )
   g.add_step( gdsmerge        )
 
@@ -127,7 +125,7 @@ def construct():
   # Every Innovus step needs to know the SRAM timing (.lib) and physical
   # (.lef) views so it can correctly handle them during PnR.
 
-  for step in [iflow, init, power, place, cts, postcts_hold, route, postroute, postroute_opt, signoff]:
+  for step in [iflow, init, power, place, cts, postcts_hold, route, postroute, signoff]:
     step.extend_inputs(['sky130_sram_4kbyte_1rw1r_32x1024_8_TT_1p8V_25C.lib',
                         'sky130_sram_4kbyte_1rw1r_32x1024_8.lef'])
     step.extend_inputs(['sky130_sram_1kbyte_1rw1r_32x256_8_TT_1p8V_25C.lib',
@@ -191,7 +189,6 @@ def construct():
   g.connect_by_name( adk,          postcts_hold )
   g.connect_by_name( adk,          route        )
   g.connect_by_name( adk,          postroute    )
-  g.connect_by_name( adk,          postroute_opt)
   g.connect_by_name( adk,          signoff      )
   g.connect_by_name( adk,          gdsmerge     )
 
@@ -204,7 +201,6 @@ def construct():
   g.connect_by_name( sram,         postcts_hold )
   g.connect_by_name( sram,         route        )
   g.connect_by_name( sram,         postroute    )
-  g.connect_by_name( sram,         postroute_opt)
   g.connect_by_name( sram,         signoff      )
   g.connect_by_name( sram,         gdsmerge     )
 
@@ -223,7 +219,6 @@ def construct():
   g.connect_by_name( iflow,        postcts_hold )
   g.connect_by_name( iflow,        route        )
   g.connect_by_name( iflow,        postroute    )
-  g.connect_by_name( iflow,        postroute_opt)
   g.connect_by_name( iflow,        signoff      )
 
   # --- Core place-and-route chain ---
@@ -236,8 +231,7 @@ def construct():
   g.connect_by_name( cts,          postcts_hold )
   g.connect_by_name( postcts_hold, route        )
   g.connect_by_name( route,        postroute    )
-  g.connect_by_name( postroute,    postroute_opt)
-  g.connect_by_name( postroute_opt,signoff      )
+  g.connect_by_name( postroute,    signoff      )
   g.connect_by_name( signoff,      gdsmerge     )
 
   #-----------------------------------------------------------------------
