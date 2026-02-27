@@ -13,7 +13,7 @@
 # rectangular chip with a height that is twice the width.
 
 set core_aspect_ratio   1.00; # Aspect ratio 1.0 for a square chip
-set core_density_target 0.55; # Placement density of 70% is reasonable
+set core_density_target 0.55; # Lower density gives placer more room for timing
 
 # Make room in the floorplan for the core power ring
 
@@ -79,6 +79,13 @@ placeInstance ofmap_buffer_inst/ram1/genblk1_width_macro_2__sram 1948 2113 MX
 placeInstance ofmap_buffer_inst/ram1/genblk1_width_macro_3__sram 710 2113 MX
 
 addHaloToBlock 5 5 5 5 -allBlock
+
+# Guide the systolic array cells to stay compact in the center
+# This reduces wire delay on the critical MAC-to-MAC paths
+createGuide systolic_guide \
+  800 400 1800 1600
+addInstToGuide systolic_guide \
+  [dbGet [dbGet top.insts.name systolic_array_with_skew_inst/* -p].name]
 
 # li1 routing blockages around SRAMs — uncomment if DRC shorts on li1 reappear
 # foreach inst [dbGet [dbGet top.insts.cell.baseClass block -p2].name] {
