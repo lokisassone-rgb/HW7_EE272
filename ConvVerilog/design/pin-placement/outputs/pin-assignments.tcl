@@ -26,11 +26,13 @@ for {set i 31} {$i >= 0} {incr i -1} {
 }
 lappend pins_top ofmap_vld ofmap_rdy
 
-# Left side: clk, rst_n, handshake signals spread evenly (met3, horizontal metal)
+# Left side: control + handshake, rst_n in middle (met3, horizontal metal)
+# Order top-to-bottom: ifmap_weight_vld, ifmap_weight_rdy, clk, rst_n, config_vld, config_rdy
 
 set pins_left {}
-lappend pins_left clk rst_n
 lappend pins_left ifmap_weight_vld ifmap_weight_rdy
+lappend pins_left clk
+lappend pins_left rst_n
 lappend pins_left config_vld config_rdy
 
 # Bottom side: ifmap/weight data, config data (met2, vertical metal)
