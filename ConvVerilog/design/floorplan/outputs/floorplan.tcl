@@ -53,7 +53,7 @@ setFlipping s
 placeInstance weight_double_buffer_inst/ram/genblk1_width_macro_0__depth_macro_0__sram 1067 1050 R0
 placeInstance weight_double_buffer_inst/ram/genblk1_width_macro_0__depth_macro_1__sram 1800 1050 R0
 
-placeInstance ifmap_double_buffer_inst/ram/genblk1_width_macro_0__depth_macro_0__sram 37 1800 R0
+placeInstance ifmap_double_buffer_inst/ram/genblk1_width_macro_0__depth_macro_0__sram 37 1750 R0
 placeInstance ifmap_double_buffer_inst/ram/genblk1_width_macro_0__depth_macro_1__sram 770 1800 R0
 
 placeInstance ofmap_buffer_inst/ram0/genblk1_width_macro_0__sram 1525 90 R0
