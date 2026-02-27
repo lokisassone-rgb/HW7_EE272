@@ -78,7 +78,7 @@ placeInstance ofmap_buffer_inst/ram1/genblk1_width_macro_1__sram 116 2113 MX
 placeInstance ofmap_buffer_inst/ram1/genblk1_width_macro_2__sram 1948 2113 MX
 placeInstance ofmap_buffer_inst/ram1/genblk1_width_macro_3__sram 710 2113 MX
 
-addHaloToBlock 5 5 5 5 -allBlock
+addHaloToBlock 10 10 10 10 -allBlock
 
 # Placement guide: keep systolic array cells compact in the center
 # This reduces wire delay on the critical MAC-to-MAC paths
@@ -87,14 +87,14 @@ foreach inst [dbGet [dbGet top.insts.name systolic_array_with_skew_inst/* -p].na
   addInstToInstGroup systolic_guide $inst
 }
 
-# li1 routing blockages around SRAMs — uncomment if DRC shorts on li1 reappear
-# foreach inst [dbGet [dbGet top.insts.cell.baseClass block -p2].name] {
-#   set box [dbGet [dbGet top.insts.name $inst -p].box]
-#   set llx [expr [lindex [lindex $box 0] 0] - 20]
-#   set lly [expr [lindex [lindex $box 0] 1] - 20]
-#   set urx [expr [lindex [lindex $box 0] 2] + 20]
-#   set ury [expr [lindex [lindex $box 0] 3] + 20]
-#   createRouteBlk -box "$llx $lly $urx $ury" -layer {li1}
-# }
+# met4/met5 routing blockages around SRAMs to prevent parallel run length spacing DRC
+foreach inst [dbGet [dbGet top.insts.cell.baseClass block -p2].name] {
+  set box [dbGet [dbGet top.insts.name $inst -p].box]
+  set llx [expr [lindex [lindex $box 0] 0] - 2]
+  set lly [expr [lindex [lindex $box 0] 1] - 2]
+  set urx [expr [lindex [lindex $box 0] 2] + 2]
+  set ury [expr [lindex [lindex $box 0] 3] + 2]
+  createRouteBlk -box "$llx $lly $urx $ury" -layer {met4 met5}
+}
 
 setDontUse sky130_fd_sc_hd__clkinv_16 true
