@@ -1,0 +1,749 @@
+Using Power View: analysis_default.
+AAE_INFO: opIsDesignInPostRouteState() is 1
+AAE_INFO: resetNetProps viewIdx 0 
+Starting SI iteration 1 using Infinite Timing Windows
+#################################################################################
+# Design Stage: PostRoute
+# Design Name: conv
+# Design Mode: 130nm
+# Analysis Mode: MMMC OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI On 
+#################################################################################
+Start delay calculation (fullDC) (16 T). (MEM=7259.25)
+AAE_INFO-618: Total number of nets in the design is 22304,  100.0 percent of the nets selected for SI analysis
+End delay calculation. (MEM=7330.05 CPU=0:00:05.1 REAL=0:00:00.0)
+End delay calculation (fullDC). (MEM=7330.05 CPU=0:00:05.5 REAL=0:00:00.0)
+Loading CTE timing window with TwFlowType 0...(CPU = 0:00:00.0, REAL = 0:00:00.0, MEM = 7322.0M)
+Add other clocks and setupCteToAAEClockMapping during iter 1
+Loading CTE timing window is completed (CPU = 0:00:00.1, REAL = 0:00:00.0, MEM = 7354.0M)
+Starting SI iteration 2
+Start delay calculation (fullDC) (16 T). (MEM=6674.16)
+AAE_INFO-618: Total number of nets in the design is 22304,  2.1 percent of the nets selected for SI analysis
+End delay calculation. (MEM=7404.17 CPU=0:00:00.4 REAL=0:00:00.0)
+End delay calculation (fullDC). (MEM=7404.17 CPU=0:00:00.4 REAL=0:00:00.0)
+Load RC corner of view analysis_default
+
+Begin Power Analysis
+
+             0V	    VSSE
+             0V	    VSSPST
+             0V	    VPW
+             0V	    VSS
+           1.8V	    VDDPE
+           1.8V	    VDDCE
+           1.8V	    POC
+           1.8V	    VDDPST
+           1.8V	    VNW
+           1.8V	    VDD
+Begin Processing Timing Library for Power Calculation
+
+Begin Processing Timing Library for Power Calculation
+
+
+
+Begin Processing Power Net/Grid for Power Calculation
+
+Ended Processing Power Net/Grid for Power Calculation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=5460.68MB/8701.50MB/5460.68MB)
+
+Begin Processing Timing Window Data for Power Calculation
+
+CK: assigning clock ideal_clock to net clk
+Ended Processing Timing Window Data for Power Calculation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=5460.68MB/8701.50MB/5460.68MB)
+
+Begin Processing User Attributes
+
+Ended Processing User Attributes: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=5460.68MB/8701.50MB/5460.68MB)
+
+Begin Processing Signal Activity
+
+
+Starting Activity Propagation
+2026-Feb-27 17:26:45 (2026-Feb-28 01:26:45 GMT)
+2026-Feb-27 17:26:45 (2026-Feb-28 01:26:45 GMT): 10%
+2026-Feb-27 17:26:45 (2026-Feb-28 01:26:45 GMT): 20%
+
+Finished Activity Propagation
+2026-Feb-27 17:26:45 (2026-Feb-28 01:26:45 GMT)
+Ended Processing Signal Activity: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=5461.18MB/8701.50MB/5461.18MB)
+
+Begin Power Computation
+
+      ----------------------------------------------------------
+      # of cell(s) missing both power/leakage table: 0
+      # of cell(s) missing power table: 1
+      # of cell(s) missing leakage table: 0
+      ----------------------------------------------------------
+CellName                                  Missing Table(s)
+sky130_fd_sc_hd__conb_1                   internal power, 
+
+
+
+Starting Calculating power
+2026-Feb-27 17:26:45 (2026-Feb-28 01:26:45 GMT)
+2026-Feb-27 17:26:46 (2026-Feb-28 01:26:46 GMT): 10%
+2026-Feb-27 17:26:46 (2026-Feb-28 01:26:46 GMT): 20%
+2026-Feb-27 17:26:46 (2026-Feb-28 01:26:46 GMT): 30%
+2026-Feb-27 17:26:46 (2026-Feb-28 01:26:46 GMT): 40%
+2026-Feb-27 17:26:46 (2026-Feb-28 01:26:46 GMT): 50%
+2026-Feb-27 17:26:46 (2026-Feb-28 01:26:46 GMT): 60%
+2026-Feb-27 17:26:46 (2026-Feb-28 01:26:46 GMT): 70%
+2026-Feb-27 17:26:46 (2026-Feb-28 01:26:46 GMT): 80%
+2026-Feb-27 17:26:46 (2026-Feb-28 01:26:46 GMT): 90%
+
+Finished Calculating power
+2026-Feb-27 17:26:46 (2026-Feb-28 01:26:46 GMT)
+      # of MSMV cell(s) missing power_level: 0
+Ended Power Computation: (cpu=0:00:02, real=0:00:00, mem(process/total/peak)=5482.18MB/8863.57MB/5482.18MB)
+
+Begin Processing User Attributes
+
+Ended Processing User Attributes: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=5482.18MB/8863.57MB/5482.18MB)
+
+Ended Power Analysis: (cpu=0:00:03, real=0:00:01, mem(process/total/peak)=5482.18MB/8863.57MB/5482.18MB)
+
+Begin Boundary Leakage Calculation
+Ended Boundary Leakage Calculation: (cpu=0:00:00, real=0:00:00,
+mem(process/total/peak)=5482.18MB/8863.57MB/5482.18MB)
+Begin Static Power Report Generation
+*----------------------------------------------------------------------------------------
+*	Innovus 21.16-s078_1 (64bit) 12/07/2022 12:07 (Linux 3.10.0-693.el7.x86_64)
+*	
+*
+* 	Date & Time:	2026-Feb-27 17:26:46 (2026-Feb-28 01:26:46 GMT)
+*
+*----------------------------------------------------------------------------------------
+*
+*	Design: conv
+*
+*	Parasitic Files used:
+*
+*       Power View : analysis_default
+*
+*       User-Defined Activity : N.A.
+*
+*       Activity File: N.A.
+*
+*       Hierarchical Global Activity: N.A.
+*
+*       Global Activity: N.A.
+*
+*       Sequential Element Activity: 0.200000
+*
+*       Primary Input Activity: 0.200000
+*
+*       Default icg ratio: N.A.
+*
+*       Global Comb ClockGate Ratio: N.A.
+*
+*	Power Units = 1mW
+*
+*	Time Units = 1e-09 secs
+*
+*       report_power -hierarchy all
+*
+-----------------------------------------------------------------------------------------
+*
+
+
+
+Total Power
+-----------------------------------------------------------------------------------------
+Total Internal Power:       88.82722808 	   81.2162%
+Total Switching Power:      20.32740127 	   18.5857%
+Total Leakage Power:         0.21672230 	    0.1982%
+Total Power:               109.37135165
+-----------------------------------------------------------------------------------------
+
+
+Group                           Internal   Switching     Leakage       Total  Percentage 
+                                Power      Power         Power         Power  (%)        
+-----------------------------------------------------------------------------------------
+Sequential                         6.881       1.687   2.097e-05       8.568       7.834
+Macro                              71.91      0.1212      0.2166       72.24       66.05
+IO                                     0           0           0           0           0
+Combinational                      7.463       14.15   4.841e-05       21.62       19.76
+Clock (Combinational)             0.6635       2.998   1.215e-06       3.661       3.348
+Clock (Sequential)                 1.914       1.368    3.71e-06       3.282       3.001
+-----------------------------------------------------------------------------------------
+Total                              88.83       20.33      0.2167       109.4         100
+-----------------------------------------------------------------------------------------
+
+
+Clock                           Internal   Switching     Leakage       Total  Percentage 
+                                Power      Power         Power         Power  (%)        
+-----------------------------------------------------------------------------------------
+ideal_clock                        2.577       4.366   4.926e-06       6.943       6.349
+-----------------------------------------------------------------------------------------
+Total                              2.577       4.366   4.926e-06       6.943       6.349
+-----------------------------------------------------------------------------------------
+Clock: ideal_clock
+Clock Period: 0.010000 usec 
+Clock Toggle Rate:   200.0000 Mhz 
+Clock Static Probability:  0.5000
+  
+
+
+Rail                  Voltage   Internal   Switching     Leakage       Total  Percentage 
+                                Power      Power         Power         Power  (%)        
+-----------------------------------------------------------------------------------------
+VDD                       1.8      88.83       20.33      0.2167       109.4         100
+
+
+Hierarchy                       Internal   Switching     Leakage       Total  Percentage 
+                                Power      Power         Power         Power  (%)        
+-----------------------------------------------------------------------------------------
+weight_wadr_gen_inst               0.104     0.04084   3.493e-07      0.1449      0.1325 
+weight_radr_gen_inst             0.09757     0.07582   3.301e-07      0.1734      0.1585 
+ifmap_wadr_gen_inst              0.09819     0.05554   3.348e-07      0.1537      0.1406 
+ifmap_radr_gen_inst                1.019      0.8389   4.692e-06       1.858       1.699 
+systolic_array_with_skew_inst
+                                   7.792       5.774   3.071e-05       13.57        12.4 
+ofmap_skew_registers_inst         0.9198      0.3115   2.317e-06       1.231       1.126 
+ofmap_wadr_gen_inst              0.08241     0.06269   2.885e-07      0.1451      0.1327 
+ofmap_radr_gen_inst               0.0809     0.03178   2.707e-07      0.1127       0.103 
+ofmap_wb_radr_gen_inst           0.07906     0.03157   2.712e-07      0.1106      0.1012 
+ifmap_aggregator_inst            0.04003     0.05709   3.609e-07     0.09713     0.08881 
+ifmap_weight_fifo_inst           0.09953      0.0848   7.032e-07      0.1843      0.1685 
+weight_aggregator_inst           0.03986     0.03904   3.598e-07      0.0789     0.07214 
+ofmap_fifo_inst                   0.1614      0.1512   1.212e-06      0.3126      0.2858 
+ofmap_deaggregator_inst            0.844      0.5152   5.175e-06       1.359       1.243 
+params_fifo_inst                 0.09583     0.05327   6.531e-07      0.1491      0.1363 
+conv_controller_inst               3.105       4.211   1.628e-05       7.316       6.689 
+weight_double_buffer_inst          20.82       0.593     0.07029       21.48       19.64 
+ifmap_double_buffer_inst           21.24        1.21     0.07029       22.52       20.59 
+ofmap_buffer_inst                  31.66        4.09     0.07607       35.83       32.76 
+weight_wadr_gen_inst/clk_gate_config_block_max_reg
+                                 0.01091    0.007548   2.179e-08     0.01846     0.01688 
+weight_wadr_gen_inst/clk_gate_adr_r_reg
+                                 0.01091    0.007987   2.179e-08      0.0189     0.01728 
+weight_radr_gen_inst/clk_gate_config_block_max_reg
+                                0.007424    0.008227   1.077e-08     0.01565     0.01431 
+weight_radr_gen_inst/clk_gate_adr_r_reg
+                                0.007394    0.007555   1.077e-08     0.01495     0.01367 
+ifmap_wadr_gen_inst/clk_gate_config_block_max_reg
+                                0.007418    0.007852   1.077e-08     0.01527     0.01396 
+ifmap_wadr_gen_inst/clk_gate_adr_r_reg
+                                0.007406    0.007321   1.077e-08     0.01473     0.01347 
+ifmap_radr_gen_inst/clk_gate_config_IX0_reg
+                                 0.07416     0.06382   1.077e-07       0.138      0.1262 
+ifmap_radr_gen_inst/clk_gate_fy_reg
+                                 0.03228     0.02149   5.417e-08     0.05377     0.04917 
+ifmap_radr_gen_inst/clk_gate_oy0_reg
+                                 0.01007    0.004948   2.417e-08     0.01502     0.01373 
+systolic_array_with_skew_inst/ifmap_skew_registers
+                                  0.2602      0.4476   7.221e-07      0.7077      0.6471 
+systolic_array_with_skew_inst/systolic_array_inst
+                                   6.605       4.878   2.766e-05       11.48        10.5 
+systolic_array_with_skew_inst/ofmap_skew_registers
+                                   0.918      0.3814   2.315e-06       1.299       1.188 
+ofmap_skew_registers_inst/row_1__col_0__skew_r
+                                  0.1503     0.05505   3.762e-07      0.2053      0.1877 
+ofmap_skew_registers_inst/row_2__col_0__skew_r
+                                  0.1501     0.03771   3.765e-07      0.1878      0.1717 
+ofmap_skew_registers_inst/row_2__col_1__skew_r
+                                  0.1563     0.04332   3.879e-07      0.1996      0.1825 
+ofmap_skew_registers_inst/row_3__col_0__skew_r
+                                  0.1501     0.03915   3.762e-07      0.1893       0.173 
+ofmap_skew_registers_inst/row_3__col_1__skew_r
+                                  0.1508     0.03696    3.77e-07      0.1877      0.1716 
+ofmap_skew_registers_inst/row_3__col_2__skew_r
+                                   0.151     0.04604    3.77e-07      0.1971      0.1802 
+ofmap_wadr_gen_inst/clk_gate_config_block_max_reg
+                                0.007409    0.006228   1.077e-08     0.01364     0.01247 
+ofmap_wadr_gen_inst/clk_gate_adr_r_reg
+                                0.007403    0.005927   1.077e-08     0.01333     0.01219 
+ofmap_radr_gen_inst/clk_gate_config_block_max_reg
+                                0.007416    0.006515   1.077e-08     0.01393     0.01274 
+ofmap_radr_gen_inst/clk_gate_adr_r_reg
+                                 0.00743    0.007165   1.077e-08      0.0146     0.01334 
+ofmap_wb_radr_gen_inst/clk_gate_config_block_max_reg
+                                0.007425    0.006971   1.077e-08      0.0144     0.01316 
+ofmap_wb_radr_gen_inst/clk_gate_adr_r_reg
+                                0.007259    0.006492   1.093e-08     0.01375     0.01257 
+ifmap_aggregator_inst/clk_gate_receiver_data_unpacked_reg_1_
+                                0.005875   0.0004023   2.627e-08    0.006277    0.005739 
+ifmap_aggregator_inst/clk_gate_receiver_data_unpacked_reg_0_
+                                0.005876   0.0004205   2.627e-08    0.006297    0.005757 
+ifmap_weight_fifo_inst/fifo_inst
+                                 0.09953      0.0848   7.032e-07      0.1843      0.1685 
+weight_aggregator_inst/clk_gate_receiver_data_unpacked_reg_1_
+                                0.005877   0.0003737   2.627e-08    0.006251    0.005715 
+weight_aggregator_inst/clk_gate_receiver_data_unpacked_reg_0_
+                                0.005876   0.0003565   2.627e-08    0.006232    0.005698 
+ofmap_fifo_inst/fifo_inst         0.1614      0.1512   1.212e-06      0.3126      0.2858 
+ofmap_deaggregator_inst/instantiate_fifos_0__fifo_inst
+                                  0.1986      0.0722    1.21e-06      0.2708      0.2476 
+ofmap_deaggregator_inst/instantiate_fifos_1__fifo_inst
+                                  0.1979      0.1276   1.223e-06      0.3255      0.2976 
+ofmap_deaggregator_inst/instantiate_fifos_2__fifo_inst
+                                   0.202     0.07862   1.234e-06      0.2807      0.2566 
+ofmap_deaggregator_inst/instantiate_fifos_3__fifo_inst
+                                  0.1969      0.1207   1.146e-06      0.3176      0.2904 
+params_fifo_inst/fifo_inst
+                                 0.09583     0.05327   6.531e-07      0.1491      0.1363 
+conv_controller_inst/clk_gate_ofmap_skew_en_reg
+                                 0.01382     0.00906    2.22e-08     0.02288     0.02092 
+conv_controller_inst/clk_gate_oc1_r_reg
+                                 0.02759     0.02221    4.44e-08      0.0498     0.04553 
+conv_controller_inst/clk_gate_config_r_reg_33_
+                                0.002734    3.68e-06   1.318e-08    0.002738    0.002503 
+conv_controller_inst/clk_gate_config_r_reg_32_
+                                0.002734   4.158e-06   1.318e-08    0.002739    0.002504 
+conv_controller_inst/clk_gate_config_r_reg_31_
+                                0.002734   3.467e-06   1.318e-08    0.002738    0.002503 
+conv_controller_inst/clk_gate_config_r_reg_30_
+                                0.002736   3.787e-06   1.318e-08    0.002739    0.002505 
+conv_controller_inst/clk_gate_config_r_reg_29_
+                                0.002734   3.606e-06   1.318e-08    0.002738    0.002503 
+conv_controller_inst/clk_gate_config_r_reg_28_
+                                0.002734   4.229e-06   1.318e-08    0.002739    0.002504 
+conv_controller_inst/clk_gate_config_r_reg_27_
+                                0.002734   3.702e-06   1.318e-08    0.002738    0.002503 
+conv_controller_inst/clk_gate_config_r_reg_26_
+                                0.002735   3.688e-06   1.318e-08    0.002739    0.002504 
+conv_controller_inst/clk_gate_config_r_reg_25_
+                                0.002736   3.889e-06   1.318e-08     0.00274    0.002505 
+conv_controller_inst/clk_gate_config_r_reg_24_
+                                0.002736   4.556e-06   1.318e-08     0.00274    0.002505 
+conv_controller_inst/clk_gate_config_r_reg_23_
+                                0.002736   4.197e-06   1.318e-08     0.00274    0.002505 
+conv_controller_inst/clk_gate_config_r_reg_22_
+                                0.002736   3.816e-06   1.318e-08    0.002739    0.002505 
+conv_controller_inst/clk_gate_config_r_reg_20_
+                                 0.00274   5.459e-06   1.318e-08    0.002746    0.002511 
+conv_controller_inst/clk_gate_config_r_reg_18_
+                                0.002734   4.757e-06   1.318e-08    0.002739    0.002504 
+conv_controller_inst/clk_gate_config_r_reg_16_
+                                0.002734   4.083e-06   1.318e-08    0.002738    0.002503 
+conv_controller_inst/clk_gate_config_r_reg_14_
+                                0.002734   3.903e-06   1.318e-08    0.002738    0.002503 
+conv_controller_inst/clk_gate_config_r_reg_12_
+                                0.002736   4.475e-06   1.318e-08     0.00274    0.002505 
+conv_controller_inst/clk_gate_config_r_reg_10_
+                                0.002736   4.477e-06   1.318e-08     0.00274    0.002505 
+conv_controller_inst/clk_gate_config_r_reg_8_
+                                0.002736   4.285e-06   1.318e-08     0.00274    0.002505 
+conv_controller_inst/clk_gate_config_r_reg_6_
+                                0.002736   4.969e-06   1.318e-08    0.002741    0.002506 
+conv_controller_inst/clk_gate_config_r_reg_4_
+                                0.002733   3.982e-06   1.318e-08    0.002737    0.002503 
+conv_controller_inst/clk_gate_config_r_reg_2_
+                                0.002736   3.868e-06   1.318e-08    0.002739    0.002505 
+conv_controller_inst/clk_gate_config_r_reg_0_
+                                0.002736   4.158e-06   1.318e-08     0.00274    0.002505 
+conv_controller_inst/clk_gate_ifmap_wadr_r_reg
+                                 0.02707     0.02277   4.189e-08     0.04983     0.04556 
+conv_controller_inst/clk_gate_ofmap_switch_banks_reg
+                                 0.06468      0.0538   9.705e-08      0.1185      0.1083 
+conv_controller_inst/clk_gate_ofmap_wbadr_r_reg
+                                 0.01095    0.007593   2.218e-08     0.01854     0.01696 
+weight_double_buffer_inst/ram
+                                   20.81      0.5849     0.07029       21.47       19.63 
+ifmap_double_buffer_inst/ram
+                                   21.24       1.205     0.07029       22.51       20.58 
+ofmap_buffer_inst/ram0             15.68      0.7652     0.03803       16.48       15.07 
+ofmap_buffer_inst/ram1              15.7      0.8833     0.03803       16.62        15.2 
+weight_wadr_gen_inst/add_x_3
+                                0.001801    0.001529   6.019e-08     0.00333    0.003044 
+weight_radr_gen_inst/add_x_3
+                                0.001835    0.001518   6.019e-08    0.003353    0.003065 
+ifmap_wadr_gen_inst/add_x_3
+                                 0.00188    0.001564   6.019e-08    0.003444    0.003149 
+ifmap_radr_gen_inst/DP_OP_125J3_127_9481
+                                  0.3717      0.5658   2.436e-06      0.9375      0.8572 
+ifmap_radr_gen_inst/DP_OP_124J3_126_8590
+                                0.005635    0.005219   6.188e-08     0.01085    0.009924 
+ifmap_radr_gen_inst/DP_OP_123J3_125_8590
+                                0.005606    0.004998   6.129e-08      0.0106    0.009696 
+ifmap_radr_gen_inst/DP_OP_122J3_124_8590
+                                0.005637     0.00569   6.188e-08     0.01133     0.01036 
+ifmap_radr_gen_inst/DP_OP_121J3_123_8590
+                                0.005784    0.005849   6.204e-08     0.01163     0.01064 
+ifmap_radr_gen_inst/DP_OP_120J3_122_8590
+                                0.005613    0.005777   6.129e-08     0.01139     0.01041 
+ifmap_radr_gen_inst/add_x_14
+                                0.002006    0.001702   6.019e-08    0.003708     0.00339 
+ifmap_radr_gen_inst/add_x_13
+                                0.002018     0.00172   6.019e-08    0.003738    0.003418 
+ifmap_radr_gen_inst/add_x_12
+                                0.002237    0.001959   6.019e-08    0.004196    0.003836 
+ifmap_radr_gen_inst/add_x_11
+                                0.001998    0.001865   6.192e-08    0.003863    0.003532 
+ifmap_radr_gen_inst/add_x_10
+                                0.002019    0.001704   6.145e-08    0.003723    0.003404 
+ofmap_wadr_gen_inst/add_x_3
+                                0.001531    0.001239   4.641e-08     0.00277    0.002533 
+ofmap_radr_gen_inst/add_x_3
+                                0.001682    0.001464   4.641e-08    0.003145    0.002876 
+ofmap_wb_radr_gen_inst/add_x_3
+                                0.001557    0.001287   4.641e-08    0.002844    0.002601 
+conv_controller_inst/DP_OP_240J1_126_5273
+                                 0.01616     0.01564   1.981e-07     0.03181     0.02908 
+conv_controller_inst/DP_OP_237J1_123_3617
+                                0.006634    0.005211    8.88e-08     0.01185     0.01083 
+conv_controller_inst/DP_OP_236J1_122_3617
+                                0.006527    0.004729    8.88e-08     0.01126     0.01029 
+conv_controller_inst/gte_x_90
+                                  0.0178     0.02521   1.708e-07     0.04301     0.03933 
+conv_controller_inst/lte_x_88
+                                 0.01716     0.02321   1.708e-07     0.04036      0.0369 
+conv_controller_inst/add_x_84
+                                0.006412    0.006409   1.961e-07     0.01282     0.01172 
+conv_controller_inst/add_x_24
+                                0.004364    0.003586   2.118e-07     0.00795    0.007269 
+conv_controller_inst/gte_x_23
+                                 0.01721     0.02306   1.634e-07     0.04028     0.03683 
+conv_controller_inst/lte_x_22
+                                 0.02883     0.04111   1.683e-07     0.06995     0.06395 
+conv_controller_inst/add_x_21
+                                0.006814    0.006897   2.118e-07     0.01371     0.01254 
+conv_controller_inst/lte_x_20
+                                 0.01768     0.02304   1.694e-07     0.04073     0.03724 
+conv_controller_inst/add_x_19
+                                0.006629    0.006634   2.132e-07     0.01326     0.01213 
+conv_controller_inst/gte_x_18
+                                 0.01788     0.02577   1.694e-07     0.04366     0.03991 
+conv_controller_inst/add_x_17
+                                0.006912    0.007138   2.077e-07     0.01405     0.01285 
+conv_controller_inst/lte_x_16
+                                 0.01777     0.02291   1.708e-07     0.04069      0.0372 
+conv_controller_inst/add_x_15
+                                0.006549    0.006587   1.961e-07     0.01314     0.01201 
+conv_controller_inst/lte_x_13
+                                 0.01778     0.02294   1.694e-07     0.04072     0.03723 
+conv_controller_inst/lte_x_12
+                                  0.0327     0.05036   1.716e-07     0.08306     0.07594 
+conv_controller_inst/lte_x_8
+                                 0.03275     0.04808   1.657e-07     0.08084     0.07391 
+conv_controller_inst/add_x_5
+                                0.005028    0.004252   2.117e-07     0.00928    0.008485 
+conv_controller_inst/add_x_4
+                                0.004421    0.003605   2.117e-07    0.008027    0.007339 
+conv_controller_inst/add_x_2
+                                0.002158    0.001795   6.708e-08    0.003953    0.003614 
+conv_controller_inst/add_x_1
+                                0.002228    0.001914   6.708e-08    0.004143    0.003788 
+conv_controller_inst/lte_x_11
+                                 0.06774      0.1177   2.738e-07      0.1854      0.1695 
+conv_controller_inst/lte_x_9
+                                  0.0672      0.1083   2.746e-07      0.1755      0.1605 
+conv_controller_inst/lte_x_7
+                                 0.06732      0.1146   2.739e-07       0.182      0.1664 
+conv_controller_inst/gte_x_6
+                                 0.07309      0.1551   2.631e-07      0.2282      0.2086 
+conv_controller_inst/gte_x_89
+                                 0.07539      0.1556   2.723e-07       0.231      0.2112 
+conv_controller_inst/lte_x_10
+                                 0.02916     0.05485   2.726e-07     0.08401     0.07681 
+conv_controller_inst/DP_OP_238J1_124_1125
+                                   1.315       2.103   5.401e-06       3.417       3.125 
+conv_controller_inst/DP_OP_239J1_125_8379
+                                  0.1252      0.1969    1.04e-06      0.3222      0.2946 
+systolic_array_with_skew_inst/ifmap_skew_registers/row_1__col_0__skew_r
+                                 0.04253     0.04951   1.102e-07     0.09203     0.08415 
+systolic_array_with_skew_inst/ifmap_skew_registers/row_2__col_0__skew_r
+                                 0.04502     0.07568   1.196e-07      0.1207      0.1104 
+systolic_array_with_skew_inst/ifmap_skew_registers/row_2__col_1__skew_r
+                                 0.03802     0.03912   1.013e-07     0.07714     0.07053 
+systolic_array_with_skew_inst/ifmap_skew_registers/row_3__col_0__skew_r
+                                 0.04494     0.07457   1.196e-07      0.1195      0.1093 
+systolic_array_with_skew_inst/ifmap_skew_registers/row_3__col_1__skew_r
+                                 0.03789     0.02553   9.836e-08     0.06342     0.05799 
+systolic_array_with_skew_inst/ifmap_skew_registers/row_3__col_2__skew_r
+                                 0.03779     0.03407   9.836e-08     0.07186      0.0657 
+systolic_array_with_skew_inst/systolic_array_inst/weight_in_skew_registers_inst
+                                  0.2418      0.2408   6.633e-07      0.4826      0.4413 
+systolic_array_with_skew_inst/systolic_array_inst/row_0__col_0__mac_inst
+                                  0.5122      0.5259   1.613e-06       1.038      0.9492 
+systolic_array_with_skew_inst/systolic_array_inst/row_0__col_1__mac_inst
+                                  0.3981      0.3028   1.712e-06      0.7009      0.6408 
+systolic_array_with_skew_inst/systolic_array_inst/row_0__col_2__mac_inst
+                                  0.4005      0.2714   1.715e-06      0.6719      0.6143 
+systolic_array_with_skew_inst/systolic_array_inst/row_0__col_3__mac_inst
+                                  0.3937      0.2949   1.693e-06      0.6885      0.6295 
+systolic_array_with_skew_inst/systolic_array_inst/row_1__col_0__mac_inst
+                                  0.3938      0.2488   1.705e-06      0.6426      0.5876 
+systolic_array_with_skew_inst/systolic_array_inst/row_1__col_1__mac_inst
+                                  0.3894       0.241   1.692e-06      0.6304      0.5764 
+systolic_array_with_skew_inst/systolic_array_inst/row_1__col_2__mac_inst
+                                  0.3954      0.2448   1.706e-06      0.6402      0.5853 
+systolic_array_with_skew_inst/systolic_array_inst/row_1__col_3__mac_inst
+                                  0.3887      0.2369   1.694e-06      0.6257      0.5721 
+systolic_array_with_skew_inst/systolic_array_inst/row_2__col_0__mac_inst
+                                   0.396      0.2499   1.707e-06      0.6459      0.5906 
+systolic_array_with_skew_inst/systolic_array_inst/row_2__col_1__mac_inst
+                                  0.3921      0.2431   1.705e-06      0.6351      0.5807 
+systolic_array_with_skew_inst/systolic_array_inst/row_2__col_2__mac_inst
+                                  0.3964      0.2629   1.702e-06      0.6593      0.6028 
+systolic_array_with_skew_inst/systolic_array_inst/row_2__col_3__mac_inst
+                                  0.3948      0.2582   1.697e-06       0.653      0.5971 
+systolic_array_with_skew_inst/systolic_array_inst/row_3__col_0__mac_inst
+                                  0.3544      0.2296   1.604e-06       0.584       0.534 
+systolic_array_with_skew_inst/systolic_array_inst/row_3__col_1__mac_inst
+                                  0.3503      0.2271   1.599e-06      0.5774       0.528 
+systolic_array_with_skew_inst/systolic_array_inst/row_3__col_2__mac_inst
+                                    0.35      0.2269   1.597e-06      0.5769      0.5275 
+systolic_array_with_skew_inst/systolic_array_inst/row_3__col_3__mac_inst
+                                  0.3503      0.2522   1.603e-06      0.6026       0.551 
+systolic_array_with_skew_inst/ofmap_skew_registers/row_1__col_0__skew_r
+                                  0.1508     0.08227    3.77e-07       0.233      0.2131 
+systolic_array_with_skew_inst/ofmap_skew_registers/row_2__col_0__skew_r
+                                  0.1542     0.04439   3.852e-07      0.1986      0.1815 
+systolic_array_with_skew_inst/ofmap_skew_registers/row_2__col_1__skew_r
+                                  0.1511     0.04126    3.77e-07      0.1923      0.1758 
+systolic_array_with_skew_inst/ofmap_skew_registers/row_3__col_0__skew_r
+                                  0.1508     0.03843    3.77e-07      0.1892       0.173 
+systolic_array_with_skew_inst/ofmap_skew_registers/row_3__col_1__skew_r
+                                  0.1509     0.03779    3.77e-07      0.1887      0.1725 
+systolic_array_with_skew_inst/ofmap_skew_registers/row_3__col_2__skew_r
+                                  0.1509     0.08414    3.77e-07       0.235      0.2149 
+ofmap_skew_registers_inst/row_1__col_0__skew_r/clk_gate_r_reg
+                                 0.02962      0.0261   4.307e-08     0.05572     0.05095 
+ofmap_skew_registers_inst/row_2__col_0__skew_r/clk_gate_r_reg
+                                 0.02962     0.02734   4.307e-08     0.05696     0.05208 
+ofmap_skew_registers_inst/row_2__col_1__skew_r/clk_gate_r_reg
+                                  0.0349     0.02483   5.397e-08     0.05973     0.05461 
+ofmap_skew_registers_inst/row_3__col_0__skew_r/clk_gate_r_reg
+                                 0.02965     0.02536   4.307e-08     0.05501     0.05029 
+ofmap_skew_registers_inst/row_3__col_1__skew_r/clk_gate_r_reg
+                                 0.02968     0.02664   4.307e-08     0.05632      0.0515 
+ofmap_skew_registers_inst/row_3__col_2__skew_r/clk_gate_r_reg
+                                  0.0297     0.02734   4.307e-08     0.05704     0.05215 
+ifmap_weight_fifo_inst/fifo_inst/clk_gate_D_OUT_reg
+                                0.008465    0.003497   2.523e-08     0.01196     0.01094 
+ifmap_weight_fifo_inst/fifo_inst/clk_gate_arr_reg_0_
+                                0.006074   0.0005777    2.71e-08    0.006652    0.006082 
+ifmap_weight_fifo_inst/fifo_inst/clk_gate_arr_reg_1_
+                                0.006289   0.0008655   2.612e-08    0.007155    0.006542 
+ofmap_fifo_inst/fifo_inst/clk_gate_D_OUT_reg
+                                 0.01715    0.006856   5.012e-08       0.024     0.02195 
+ofmap_fifo_inst/fifo_inst/clk_gate_arr_reg_0_
+                                 0.01474    0.001029   6.641e-08     0.01577     0.01442 
+ofmap_fifo_inst/fifo_inst/clk_gate_arr_reg_1_
+                                 0.01186    0.001039   5.249e-08      0.0129     0.01179 
+ofmap_deaggregator_inst/instantiate_fifos_0__fifo_inst/fifo_inst
+                                  0.1986      0.0722    1.21e-06      0.2708      0.2476 
+ofmap_deaggregator_inst/instantiate_fifos_1__fifo_inst/fifo_inst
+                                  0.1979      0.1276   1.223e-06      0.3255      0.2976 
+ofmap_deaggregator_inst/instantiate_fifos_2__fifo_inst/fifo_inst
+                                   0.202     0.07862   1.234e-06      0.2807      0.2566 
+ofmap_deaggregator_inst/instantiate_fifos_3__fifo_inst/fifo_inst
+                                  0.1969      0.1207   1.146e-06      0.3176      0.2904 
+params_fifo_inst/fifo_inst/clk_gate_D_OUT_reg
+                                0.008943    0.003956   2.498e-08      0.0129     0.01179 
+params_fifo_inst/fifo_inst/clk_gate_arr_reg_0_
+                                0.006133   0.0005868   2.708e-08     0.00672    0.006144 
+params_fifo_inst/fifo_inst/clk_gate_arr_reg_1_
+                                0.006362   0.0009008    2.61e-08    0.007263     0.00664 
+systolic_array_with_skew_inst/systolic_array_inst/row_reg_1__col_reg_0__genblk1_skew_r
+                                0.004743    0.001736   1.318e-08    0.006479    0.005924 
+systolic_array_with_skew_inst/systolic_array_inst/row_reg_1__col_reg_1__genblk1_skew_r
+                                0.004745    0.001945   1.318e-08     0.00669    0.006117 
+systolic_array_with_skew_inst/systolic_array_inst/row_reg_1__col_reg_2__genblk1_skew_r
+                                0.004742    0.001889   1.318e-08    0.006631    0.006063 
+systolic_array_with_skew_inst/systolic_array_inst/row_reg_1__col_reg_3__genblk1_skew_r
+                                 0.00475    0.001423   1.318e-08    0.006173    0.005644 
+systolic_array_with_skew_inst/systolic_array_inst/row_reg_2__col_reg_0__genblk1_skew_r
+                                0.004757   0.0007605   1.318e-08    0.005517    0.005045 
+systolic_array_with_skew_inst/systolic_array_inst/row_reg_2__col_reg_1__genblk1_skew_r
+                                0.004757   0.0007592   1.318e-08    0.005516    0.005044 
+systolic_array_with_skew_inst/systolic_array_inst/row_reg_2__col_reg_2__genblk1_skew_r
+                                0.004755   0.0008849   1.318e-08     0.00564    0.005157 
+systolic_array_with_skew_inst/systolic_array_inst/row_reg_2__col_reg_3__genblk1_skew_r
+                                 0.00476   0.0007698   1.318e-08     0.00553    0.005056 
+systolic_array_with_skew_inst/systolic_array_inst/row_reg_3__col_reg_0__genblk1_skew_r
+                                0.004755   0.0009681   1.318e-08    0.005724    0.005233 
+systolic_array_with_skew_inst/systolic_array_inst/row_reg_3__col_reg_1__genblk1_skew_r
+                                0.004759    0.000653   1.318e-08    0.005412    0.004949 
+systolic_array_with_skew_inst/systolic_array_inst/row_reg_3__col_reg_2__genblk1_skew_r
+                                0.004762   0.0006684   1.318e-08    0.005431    0.004965 
+systolic_array_with_skew_inst/systolic_array_inst/row_reg_3__col_reg_3__genblk1_skew_r
+                                0.004758   0.0004727   1.318e-08    0.005231    0.004783 
+systolic_array_with_skew_inst/ifmap_skew_registers/row_1__col_0__skew_r/clk_gate_r_reg
+                                 0.00742    0.007461   1.077e-08     0.01488     0.01361 
+systolic_array_with_skew_inst/ifmap_skew_registers/row_2__col_0__skew_r/clk_gate_r_reg
+                                 0.00741    0.007008   1.077e-08     0.01442     0.01318 
+systolic_array_with_skew_inst/ifmap_skew_registers/row_2__col_1__skew_r/clk_gate_r_reg
+                                0.007427    0.006683   1.077e-08     0.01411      0.0129 
+systolic_array_with_skew_inst/ifmap_skew_registers/row_3__col_0__skew_r/clk_gate_r_reg
+                                0.007393     0.00616   1.077e-08     0.01355     0.01239 
+systolic_array_with_skew_inst/ifmap_skew_registers/row_3__col_1__skew_r/clk_gate_r_reg
+                                0.007439    0.007136   1.077e-08     0.01458     0.01333 
+systolic_array_with_skew_inst/ifmap_skew_registers/row_3__col_2__skew_r/clk_gate_r_reg
+                                0.007417    0.006187   1.077e-08      0.0136     0.01244 
+systolic_array_with_skew_inst/systolic_array_inst/weight_in_skew_registers_inst/row_1__col_0__skew_r
+                                 0.04217     0.05523   1.192e-07      0.0974     0.08905 
+systolic_array_with_skew_inst/systolic_array_inst/weight_in_skew_registers_inst/row_2__col_0__skew_r
+                                 0.04188     0.04337   1.181e-07     0.08525     0.07795 
+systolic_array_with_skew_inst/systolic_array_inst/weight_in_skew_registers_inst/row_2__col_1__skew_r
+                                  0.0379     0.02815   9.836e-08     0.06605     0.06039 
+systolic_array_with_skew_inst/systolic_array_inst/weight_in_skew_registers_inst/row_3__col_0__skew_r
+                                 0.04154     0.04818   1.169e-07     0.08973     0.08204 
+systolic_array_with_skew_inst/systolic_array_inst/weight_in_skew_registers_inst/row_3__col_1__skew_r
+                                 0.03779    0.008487   9.836e-08     0.04627     0.04231 
+systolic_array_with_skew_inst/systolic_array_inst/weight_in_skew_registers_inst/row_3__col_2__skew_r
+                                 0.03793     0.02264   9.836e-08     0.06057     0.05538 
+systolic_array_with_skew_inst/systolic_array_inst/row_0__col_0__mac_inst/clk_gate_weight_r_reg
+                                0.007419    0.007158   1.077e-08     0.01458     0.01333 
+systolic_array_with_skew_inst/systolic_array_inst/row_0__col_0__mac_inst/clk_gate_ifmap_r_reg
+                                  0.0444     0.03569   6.461e-08     0.08009     0.07323 
+systolic_array_with_skew_inst/systolic_array_inst/row_0__col_1__mac_inst/clk_gate_weight_r_reg
+                                0.007398    0.006155   1.077e-08     0.01355     0.01239 
+systolic_array_with_skew_inst/systolic_array_inst/row_0__col_1__mac_inst/clk_gate_ifmap_r_reg
+                                 0.04245     0.03362   6.474e-08     0.07607     0.06955 
+systolic_array_with_skew_inst/systolic_array_inst/row_0__col_2__mac_inst/clk_gate_weight_r_reg
+                                0.007419    0.005843   1.077e-08     0.01326     0.01213 
+systolic_array_with_skew_inst/systolic_array_inst/row_0__col_2__mac_inst/clk_gate_ifmap_r_reg
+                                 0.04443     0.03476   6.461e-08     0.07919     0.07241 
+systolic_array_with_skew_inst/systolic_array_inst/row_0__col_3__mac_inst/clk_gate_weight_r_reg
+                                0.007418    0.005813   1.077e-08     0.01323      0.0121 
+systolic_array_with_skew_inst/systolic_array_inst/row_0__col_3__mac_inst/clk_gate_ifmap_r_reg
+                                 0.03711     0.03357   5.384e-08     0.07068     0.06462 
+systolic_array_with_skew_inst/systolic_array_inst/row_1__col_0__mac_inst/clk_gate_weight_r_reg
+                                0.007401    0.006267   1.077e-08     0.01367      0.0125 
+systolic_array_with_skew_inst/systolic_array_inst/row_1__col_0__mac_inst/clk_gate_ifmap_r_reg
+                                  0.0405      0.0329   6.487e-08      0.0734     0.06711 
+systolic_array_with_skew_inst/systolic_array_inst/row_1__col_1__mac_inst/clk_gate_weight_r_reg
+                                0.007402     0.00645   1.077e-08     0.01385     0.01267 
+systolic_array_with_skew_inst/systolic_array_inst/row_1__col_1__mac_inst/clk_gate_ifmap_r_reg
+                                 0.03708     0.03264   5.384e-08     0.06972     0.06375 
+systolic_array_with_skew_inst/systolic_array_inst/row_1__col_2__mac_inst/clk_gate_weight_r_reg
+                                0.007406    0.006467   1.077e-08     0.01387     0.01268 
+systolic_array_with_skew_inst/systolic_array_inst/row_1__col_2__mac_inst/clk_gate_ifmap_r_reg
+                                 0.04247     0.03199   6.474e-08     0.07446     0.06808 
+systolic_array_with_skew_inst/systolic_array_inst/row_1__col_3__mac_inst/clk_gate_weight_r_reg
+                                0.007391    0.005702   1.077e-08     0.01309     0.01197 
+systolic_array_with_skew_inst/systolic_array_inst/row_1__col_3__mac_inst/clk_gate_ifmap_r_reg
+                                 0.03698     0.03012   5.384e-08      0.0671     0.06135 
+systolic_array_with_skew_inst/systolic_array_inst/row_2__col_0__mac_inst/clk_gate_weight_r_reg
+                                0.007409    0.006279   1.077e-08     0.01369     0.01252 
+systolic_array_with_skew_inst/systolic_array_inst/row_2__col_0__mac_inst/clk_gate_ifmap_r_reg
+                                 0.04442      0.0374   6.461e-08     0.08182     0.07481 
+systolic_array_with_skew_inst/systolic_array_inst/row_2__col_1__mac_inst/clk_gate_weight_r_reg
+                                 0.00739    0.006397   1.077e-08     0.01379     0.01261 
+systolic_array_with_skew_inst/systolic_array_inst/row_2__col_1__mac_inst/clk_gate_ifmap_r_reg
+                                 0.04243     0.03574   6.474e-08     0.07817     0.07147 
+systolic_array_with_skew_inst/systolic_array_inst/row_2__col_2__mac_inst/clk_gate_weight_r_reg
+                                0.007402    0.006688   1.077e-08     0.01409     0.01288 
+systolic_array_with_skew_inst/systolic_array_inst/row_2__col_2__mac_inst/clk_gate_ifmap_r_reg
+                                 0.04431     0.03464   6.461e-08     0.07895     0.07218 
+systolic_array_with_skew_inst/systolic_array_inst/row_2__col_3__mac_inst/clk_gate_weight_r_reg
+                                  0.0074    0.006561   1.077e-08     0.01396     0.01276 
+systolic_array_with_skew_inst/systolic_array_inst/row_2__col_3__mac_inst/clk_gate_ifmap_r_reg
+                                 0.03702     0.03281   5.384e-08     0.06983     0.06384 
+systolic_array_with_skew_inst/systolic_array_inst/row_3__col_0__mac_inst/clk_gate_weight_r_reg
+                                 0.00742    0.006333   1.077e-08     0.01375     0.01257 
+systolic_array_with_skew_inst/systolic_array_inst/row_3__col_0__mac_inst/clk_gate_ifmap_r_reg
+                                 0.02967     0.02447   4.307e-08     0.05414      0.0495 
+systolic_array_with_skew_inst/systolic_array_inst/row_3__col_1__mac_inst/clk_gate_weight_r_reg
+                                0.007394    0.006534   1.077e-08     0.01393     0.01273 
+systolic_array_with_skew_inst/systolic_array_inst/row_3__col_1__mac_inst/clk_gate_ifmap_r_reg
+                                 0.02955     0.02495   4.307e-08     0.05451     0.04984 
+systolic_array_with_skew_inst/systolic_array_inst/row_3__col_2__mac_inst/clk_gate_weight_r_reg
+                                0.007406    0.007113   1.077e-08     0.01452     0.01327 
+systolic_array_with_skew_inst/systolic_array_inst/row_3__col_2__mac_inst/clk_gate_ifmap_r_reg
+                                 0.02969     0.02643   4.307e-08     0.05612     0.05132 
+systolic_array_with_skew_inst/systolic_array_inst/row_3__col_3__mac_inst/clk_gate_weight_r_reg
+                                 0.00738     0.00586   1.077e-08     0.01324     0.01211 
+systolic_array_with_skew_inst/systolic_array_inst/row_3__col_3__mac_inst/clk_gate_ifmap_r_reg
+                                 0.02686     0.01877   4.328e-08     0.04563     0.04172 
+systolic_array_with_skew_inst/ofmap_skew_registers/row_1__col_0__skew_r/clk_gate_r_reg
+                                 0.02957     0.02456   4.307e-08     0.05414      0.0495 
+systolic_array_with_skew_inst/ofmap_skew_registers/row_2__col_0__skew_r/clk_gate_r_reg
+                                 0.02951     0.02265   4.307e-08     0.05216     0.04769 
+systolic_array_with_skew_inst/ofmap_skew_registers/row_2__col_1__skew_r/clk_gate_r_reg
+                                 0.02959     0.02488   4.307e-08     0.05447      0.0498 
+systolic_array_with_skew_inst/ofmap_skew_registers/row_3__col_0__skew_r/clk_gate_r_reg
+                                 0.02963     0.02561   4.307e-08     0.05524      0.0505 
+systolic_array_with_skew_inst/ofmap_skew_registers/row_3__col_1__skew_r/clk_gate_r_reg
+                                 0.02959     0.02434   4.307e-08     0.05393     0.04931 
+systolic_array_with_skew_inst/ofmap_skew_registers/row_3__col_2__skew_r/clk_gate_r_reg
+                                 0.02963     0.02642   4.307e-08     0.05606     0.05125 
+ofmap_deaggregator_inst/instantiate_fifos_0__fifo_inst/fifo_inst/clk_gate_D_OUT_reg
+                                  0.0199     0.01003   4.885e-08     0.02994     0.02737 
+ofmap_deaggregator_inst/instantiate_fifos_0__fifo_inst/fifo_inst/clk_gate_arr_reg_0_
+                                 0.01378    0.003163   5.175e-08     0.01695     0.01549 
+ofmap_deaggregator_inst/instantiate_fifos_0__fifo_inst/fifo_inst/clk_gate_arr_reg_1_
+                                 0.01722    0.003301   6.469e-08     0.02052     0.01876 
+ofmap_deaggregator_inst/instantiate_fifos_1__fifo_inst/fifo_inst/clk_gate_D_OUT_reg
+                                 0.02483     0.01191   6.106e-08     0.03674     0.03359 
+ofmap_deaggregator_inst/instantiate_fifos_1__fifo_inst/fifo_inst/clk_gate_arr_reg_0_
+                                 0.01342    0.002583    5.27e-08       0.016     0.01463 
+ofmap_deaggregator_inst/instantiate_fifos_1__fifo_inst/fifo_inst/clk_gate_arr_reg_1_
+                                 0.01353    0.002736   5.251e-08     0.01627     0.01487 
+ofmap_deaggregator_inst/instantiate_fifos_2__fifo_inst/fifo_inst/clk_gate_D_OUT_reg
+                                 0.02209     0.02039   5.297e-08     0.04248     0.03884 
+ofmap_deaggregator_inst/instantiate_fifos_2__fifo_inst/fifo_inst/clk_gate_arr_reg_0_
+                                 0.01673    0.003184   6.621e-08     0.01992     0.01821 
+ofmap_deaggregator_inst/instantiate_fifos_2__fifo_inst/fifo_inst/clk_gate_arr_reg_1_
+                                  0.0172    0.003015   6.469e-08     0.02021     0.01848 
+ofmap_deaggregator_inst/instantiate_fifos_3__fifo_inst/fifo_inst/clk_gate_D_OUT_reg
+                                  0.0199     0.01086   4.885e-08     0.03076     0.02813 
+ofmap_deaggregator_inst/instantiate_fifos_3__fifo_inst/fifo_inst/clk_gate_arr_reg_0_
+                                 0.01722     0.00337   6.469e-08     0.02059     0.01882 
+ofmap_deaggregator_inst/instantiate_fifos_3__fifo_inst/fifo_inst/clk_gate_arr_reg_1_
+                                 0.01378    0.003151   5.175e-08     0.01693     0.01548 
+systolic_array_with_skew_inst/systolic_array_inst/row_0__col_0__mac_inst/DP_OP_10J2_122_2911
+                                  0.2552      0.3777   1.018e-06      0.6329      0.5787 
+systolic_array_with_skew_inst/systolic_array_inst/row_0__col_1__mac_inst/DP_OP_10J2_122_2911
+                                  0.1526      0.1575   1.132e-06      0.3101      0.2835 
+systolic_array_with_skew_inst/systolic_array_inst/row_0__col_2__mac_inst/DP_OP_10J2_122_2911
+                                  0.1537      0.1554   1.127e-06      0.3091      0.2826 
+systolic_array_with_skew_inst/systolic_array_inst/row_0__col_3__mac_inst/DP_OP_10J2_122_2911
+                                  0.1554      0.1763   1.127e-06      0.3317      0.3033 
+systolic_array_with_skew_inst/systolic_array_inst/row_1__col_0__mac_inst/DP_OP_10J2_122_2911
+                                  0.1527      0.1533   1.129e-06       0.306      0.2798 
+systolic_array_with_skew_inst/systolic_array_inst/row_1__col_1__mac_inst/DP_OP_10J2_122_2911
+                                  0.1517      0.1504   1.127e-06      0.3021      0.2762 
+systolic_array_with_skew_inst/systolic_array_inst/row_1__col_2__mac_inst/DP_OP_10J2_122_2911
+                                  0.1523      0.1519    1.13e-06      0.3042      0.2782 
+systolic_array_with_skew_inst/systolic_array_inst/row_1__col_3__mac_inst/DP_OP_10J2_122_2911
+                                  0.1514      0.1489   1.129e-06      0.3003      0.2745 
+systolic_array_with_skew_inst/systolic_array_inst/row_2__col_0__mac_inst/DP_OP_10J2_122_2911
+                                   0.151      0.1604   1.131e-06      0.3114      0.2847 
+systolic_array_with_skew_inst/systolic_array_inst/row_2__col_1__mac_inst/DP_OP_10J2_122_2911
+                                  0.1491      0.1564   1.129e-06      0.3055      0.2794 
+systolic_array_with_skew_inst/systolic_array_inst/row_2__col_2__mac_inst/DP_OP_10J2_122_2911
+                                  0.1515      0.1681   1.127e-06      0.3195      0.2921 
+systolic_array_with_skew_inst/systolic_array_inst/row_2__col_3__mac_inst/DP_OP_10J2_122_2911
+                                  0.1573      0.1702   1.132e-06      0.3275      0.2994 
+systolic_array_with_skew_inst/systolic_array_inst/row_3__col_0__mac_inst/DP_OP_10J4_122_7835
+                                  0.1537      0.1602   1.132e-06      0.3139       0.287 
+systolic_array_with_skew_inst/systolic_array_inst/row_3__col_1__mac_inst/DP_OP_10J4_122_7835
+                                  0.1498      0.1574   1.127e-06      0.3071      0.2808 
+systolic_array_with_skew_inst/systolic_array_inst/row_3__col_2__mac_inst/DP_OP_10J4_122_7835
+                                  0.1492      0.1505   1.125e-06      0.2997       0.274 
+systolic_array_with_skew_inst/systolic_array_inst/row_3__col_3__mac_inst/DP_OP_10J4_122_7835
+                                  0.1499      0.1744   1.123e-06      0.3242      0.2964 
+systolic_array_with_skew_inst/systolic_array_inst/weight_in_skew_registers_inst/row_1__col_0__skew_r/clk_gate_r_reg
+                                0.007374    0.006048   1.077e-08     0.01342     0.01227 
+systolic_array_with_skew_inst/systolic_array_inst/weight_in_skew_registers_inst/row_2__col_0__skew_r/clk_gate_r_reg
+                                0.007379    0.006882   1.077e-08     0.01426     0.01304 
+systolic_array_with_skew_inst/systolic_array_inst/weight_in_skew_registers_inst/row_2__col_1__skew_r/clk_gate_r_reg
+                                 0.00743    0.006818   1.077e-08     0.01425     0.01303 
+systolic_array_with_skew_inst/systolic_array_inst/weight_in_skew_registers_inst/row_3__col_0__skew_r/clk_gate_r_reg
+                                0.007374    0.006635   1.077e-08     0.01401     0.01281 
+systolic_array_with_skew_inst/systolic_array_inst/weight_in_skew_registers_inst/row_3__col_1__skew_r/clk_gate_r_reg
+                                0.007361    0.006007   1.077e-08     0.01337     0.01222 
+systolic_array_with_skew_inst/systolic_array_inst/weight_in_skew_registers_inst/row_3__col_2__skew_r/clk_gate_r_reg
+                                0.007424    0.006579   1.077e-08       0.014      0.0128 
+ 
+ 
+-----------------------------------------------------------------------------------------
+*	Power Distribution Summary: 
+*              Highest Average Power: ifmap_double_buffer_inst/ram/genblk1_width_macro_0__depth_macro_1__sram (sky130_sram_4kbyte_1rw1r_32x1024_8):            10.37
+*              Highest Leakage Power: weight_double_buffer_inst/ram/genblk1_width_macro_0__depth_macro_0__sram (sky130_sram_4kbyte_1rw1r_32x1024_8):          0.03515
+*                Total Cap:      3.52541e-10 F
+*                Total instances in design: 19945
+*                Total instances in design with no power:     0
+*                Total instances in design with no activty:     0
+
+*                Total Fillers and Decap:     0
+-----------------------------------------------------------------------------------------
+ 
+** INFO:  (VOLTUS_POWR-3465): There are 0 decaps and 0 fillers in the design
+
+Ended Static Power Report Generation: (cpu=0:00:00, real=0:00:00,
+mem(process/total/peak)=5488.68MB/8863.57MB/5488.68MB)
+
