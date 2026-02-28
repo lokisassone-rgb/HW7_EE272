@@ -195,5 +195,8 @@ sroute -connect {blockPin} -layerChangeRange {met1 met5} \
               ofmap_buffer_inst/ram1/genblk1_width_macro_0__sram \
               ofmap_buffer_inst/ram1/genblk1_width_macro_1__sram \
               ofmap_buffer_inst/ram1/genblk1_width_macro_2__sram \
-              ofmap_buffer_inst/ram1/genblk1_width_macro_3__sram} 
+              ofmap_buffer_inst/ram1/genblk1_width_macro_3__sram}
+
+# Trim dangling wires left by power stripe breaks at block rings
+editTrim -nets {VDD VSS} 
 
