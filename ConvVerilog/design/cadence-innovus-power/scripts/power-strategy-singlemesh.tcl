@@ -118,8 +118,7 @@ setViaGenMode -ignore_DRC false
 
 setAddStripeMode -reset
 setAddStripeMode -stacked_via_bottom_layer met1 \
-                 -stacked_via_top_layer    $pmesh_top\
-                 -break_at {  block_ring  } 
+                 -stacked_via_top_layer    $pmesh_top
 # Add the stripes
 #
 # Use -start to offset the stripes slightly away from the core edge.
@@ -157,8 +156,7 @@ setViaGenMode -ignore_DRC false
 
 setAddStripeMode -reset
 setAddStripeMode -stacked_via_bottom_layer $pmesh_bot \
-                 -stacked_via_top_layer    $pmesh_top \
-                 -break_at {  block_ring  } 
+                 -stacked_via_top_layer    $pmesh_top
 # Add the stripes
 #
 # Use -start to offset the stripes slightly away from the core edge.
@@ -195,8 +193,5 @@ sroute -connect {blockPin} -layerChangeRange {met1 met5} \
               ofmap_buffer_inst/ram1/genblk1_width_macro_0__sram \
               ofmap_buffer_inst/ram1/genblk1_width_macro_1__sram \
               ofmap_buffer_inst/ram1/genblk1_width_macro_2__sram \
-              ofmap_buffer_inst/ram1/genblk1_width_macro_3__sram}
-
-# Trim dangling wires left by power stripe breaks at block rings
-editTrim -nets {VDD VSS} 
+              ofmap_buffer_inst/ram1/genblk1_width_macro_3__sram} 
 
