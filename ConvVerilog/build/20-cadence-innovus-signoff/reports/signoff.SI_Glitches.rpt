@@ -1,5 +1,4 @@
 NetName                                 vlPeak      vlView              vhPeak      vhView              
 #
-ofmap_buffer_inst/ram0/FE_PDN5_FE_OFN3586_FE_OFN744_ofmap_flat_100  0.0756  analysis_default -0.1368  analysis_default
 
-Total number of glitch violations: 1
+Total number of glitch violations: 0
